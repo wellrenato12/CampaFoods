@@ -1,4 +1,4 @@
-import { MapPin, Search, User } from 'lucide-react'
+import { MapPin, User } from 'lucide-react'
 import logo from '../../assets/logo.svg'
 
 export function Header() {
