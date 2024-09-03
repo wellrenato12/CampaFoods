@@ -11,6 +11,7 @@ export default {
       },
       boxShadow: {
         'button': '0 5px 10px rgba(255, 174, 0, 0.26)',
+        'button-popular': '0px 20px 40px rgba(250, 99, 35, 0.24)',
       }
     },
   },

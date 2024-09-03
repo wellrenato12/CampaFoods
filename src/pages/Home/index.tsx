@@ -1,8 +1,9 @@
 import { Header } from "../../components/Header";
+import { Bike, BriefcaseBusiness, CircleDollarSign, ConciergeBell, Donut, MapPin, MapPinHouse, Search } from "lucide-react";
+import { CardFoodDescont } from "../../components/CardFoodDescont";
 import backgroundImage from '../../assets/background-home.svg'
 import pizzaHome from '../../assets/pizza-home.svg'
-import { Bike, BriefcaseBusiness, MapPin, Search } from "lucide-react";
-import { CardFoodDescont } from "../../components/CardFoodDescont";
+import { PopularItems } from "./popular-items";
 
 export function Home() {
   return (
@@ -55,12 +56,43 @@ export function Home() {
           />
         </div>
       </div>
-      <div className="max-w-[1440px] mx-auto grid grid-cols-4 mb-20">
+      <div className="max-w-[1440px] mx-auto grid justify-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-20">
         <CardFoodDescont />
         <CardFoodDescont />
         <CardFoodDescont />
         <CardFoodDescont />
       </div>
+      <div
+        className="h-[518px]"
+        style={{ backgroundImage: 'linear-gradient(180deg, rgba(255, 206, 103, 0.22) 0%, rgba(253, 237, 202, 0) 100%)' }}
+      >
+        <div className="max-w-[1440px] mx-auto py-20">
+          <h2 className="text-center text-[#F17228] text-5xl font-bold mb-20">Como funciona</h2>
+          <div className="flex justify-center gap-8">
+            <div className="w-[307px] flex flex-col items-center">
+              <MapPinHouse className="size-28 mb-10" fill='#ffb30e' />
+              <strong className="font-bold text-2xl text-[#434343] mb-2.5">Selecione o local</strong>
+              <p className="text-[#9e9e9e] text-center">Escolha o local onde sua comida será entregue.</p>
+            </div>
+            <div className="w-[307px] flex flex-col items-center">
+              <ConciergeBell className="size-28 mb-10" fill='#ffb30e' />
+              <strong className="font-bold text-2xl text-[#434343] mb-2.5">Escolha o pedido</strong>
+              <p className="text-[#9e9e9e] text-center">Confira centenas de menus para escolher sua comida favorita.</p>
+            </div>
+            <div className="w-[307px] flex flex-col items-center">
+              <CircleDollarSign className="size-28 mb-10" fill='#ffb30e' />
+              <strong className="font-bold text-2xl text-[#434343] mb-2.5">Pagamento adiantado</strong>
+              <p className="text-[#9e9e9e] text-center">É rápido, seguro e simples. Selecione vários métodos de pagamento.</p>
+            </div>
+            <div className="w-[307px] flex flex-col items-center">
+              <Donut className="size-28 mb-10" fill='#ffb30e' />
+              <strong className="font-bold text-2xl text-[#434343] mb-2.5">Aproveite as refeições</strong>
+              <p className="text-[#9e9e9e] text-center">A comida é preparada e entregue diretamente em sua casa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <PopularItems />
     </div>
   )
 }

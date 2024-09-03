@@ -3,7 +3,7 @@ import logo from '../../assets/logo.svg'
 
 export function Header() {
   return (
-    <header className="max-w-[1440px] mx-auto flex items-center justify-between py-5">
+    <header className="max-w-[1440px] mx-auto flex items-center justify-between py-5 px-5 2xl:px-0">
       <div className='flex items-center gap-1'>
         <img className="size-7" src={logo} alt="Imagem da logo" />
         <div className="text-3xl font-bold">
@@ -16,7 +16,7 @@ export function Header() {
         <span className="text-lg text-[#424242] font-bold">Entregar em</span>
         <span className='flex gap-2'>
           <MapPin fill='#ffb30e' className="text-white" />
-          <p className='text-lg'>Localização atual <strong>Parque da figueira</strong></p>
+          <p className='text-lg'>Localização atual <strong>Feira - Naftali Miranda, 81</strong></p>
         </span>
       </div>
 
