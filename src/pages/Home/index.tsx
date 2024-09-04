@@ -4,6 +4,8 @@ import { CardFoodDescont } from "../../components/CardFoodDescont";
 import backgroundImage from '../../assets/background-home.svg'
 import pizzaHome from '../../assets/pizza-home.svg'
 import { PopularItems } from "./popular-items";
+import { FeaturedRestaurants } from "./featured-restaurants";
+import { CategoryFood } from "./category-food";
 
 export function Home() {
   return (
@@ -93,6 +95,8 @@ export function Home() {
         </div>
       </div>
       <PopularItems />
+      <FeaturedRestaurants />
+      <CategoryFood />
     </div>
   )
 }

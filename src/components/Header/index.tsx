@@ -27,7 +27,7 @@ export function Header() {
           </button>
           <input className='w-40 placeholder:font-bold placeholder:text-lg placeholder:text-[#424242]' type="text" placeholder="Procurar comida" />
         </div> */}
-        <button className='flex items-center gap-2.5 text-[#ffb30e] text-lg font-bold px-6 py-3.5 shadow-button rounded-lg'>
+        <button className='flex items-center gap-2.5 text-[#ffb30e] text-lg font-bold px-6 py-3.5 shadow-button-login rounded-lg'>
           <User fill='#ffb30e' />
           Login
         </button>
