@@ -1,11 +1,16 @@
 import { Header } from "../../components/Header";
 import { Bike, BriefcaseBusiness, CircleDollarSign, ConciergeBell, Donut, MapPin, MapPinHouse, Search } from "lucide-react";
 import { CardFoodDescont } from "../../components/CardFoodDescont";
-import backgroundImage from '../../assets/background-home.svg'
-import pizzaHome from '../../assets/pizza-home.svg'
 import { PopularItems } from "./popular-items";
 import { FeaturedRestaurants } from "./featured-restaurants";
 import { CategoryFood } from "./category-food";
+import { BestDeals } from "../../components/BestDeals";
+import backgroundImage from '../../assets/background-home.svg'
+import pizzaHome from '../../assets/pizza-home.svg'
+import pizzaOffer from '../../assets/popular-items/pizza.jpg'
+import churrascoOffer from '../../assets/popular-items/churrasco.jpg'
+import marmitaOffer from '../../assets/popular-items/frango.jpg'
+import { Footer } from "../../components/Footer";
 
 export function Home() {
   return (
@@ -97,6 +102,26 @@ export function Home() {
       <PopularItems />
       <FeaturedRestaurants />
       <CategoryFood />
+      <BestDeals
+        title="Melhores ofertas de"
+        name="Marmita"
+        description="Experimente nossas marmitas com porções generosas e ingredientes frescos, garantindo uma refeição completa e saborosa."
+        img={marmitaOffer}
+      />
+      <BestDeals
+        invert
+        title="Celebrar festas com"
+        name="Churrasco"
+        description="Desfrute de nossos churrascos com cortes suculentos e no ponto certo, perfeitos para compartilhar e saborear."
+        img={churrascoOffer}
+      />
+      <BestDeals
+        title="Sem ideias?"
+        name="Peça uma Pizza"
+        description="Aproveite o tamanho generoso das pizzas, com fatias perfeitas e recheio em abundância."
+        img={pizzaOffer}
+      />
+      <Footer />
     </div>
   )
 }
