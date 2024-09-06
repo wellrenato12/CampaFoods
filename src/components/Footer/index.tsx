@@ -69,12 +69,12 @@ export function Footer() {
             <p>Receba ofertas exclusivas em sua caixa de correio</p>
             <div className='flex items-center gap-4 py-6'>
               <div className="relative flex items-center flex-1">
-                <label htmlFor="searchInput" className="absolute left-[18px] cursor-text">
-                  <Mail fill='#ff7474' className="text-white" />
+                <label htmlFor="searchInputFooter" className="absolute left-[18px] cursor-text">
+                  <Mail fill='#adadad' />
                 </label>
                 <input
-                  id="searchInput"
-                  className='flex-1 py-3 bg-[#f5f5f5] pl-[50px] rounded-lg placeholder:text-lg placeholder:text-[#9e9e9e]'
+                  id="searchInputFooter"
+                  className='flex-1 py-3 bg-[#424242] pl-[50px] rounded-lg placeholder:text-lg placeholder:text-[#9e9e9e]'
                   type="text"
                   placeholder="Insira seu e-mail"
                 />

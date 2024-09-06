@@ -11,7 +11,7 @@ export function CardPopularItems() {
         Brasa Burger & Grill
       </span>
       <span className='text-[#212121] font-bold'>R$ 28,90</span>
-      <button className='py-3 bg-[#f17228] text-white rounded-lg shadow-button-popular'>
+      <button className='py-3 bg-[#f17228] text-white rounded-lg'>
         Peça agora
       </button>
     </div>

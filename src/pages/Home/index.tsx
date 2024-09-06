@@ -63,19 +63,19 @@ export function Home() {
           />
         </div>
       </div>
-      <div className="max-w-[1440px] mx-auto grid justify-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-20">
+      <div className="max-w-[1440px] mx-auto grid justify-items-center grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 mb-20">
         <CardFoodDescont />
         <CardFoodDescont />
         <CardFoodDescont />
         <CardFoodDescont />
       </div>
       <div
-        className="h-[518px]"
+        className="h-auto"
         style={{ backgroundImage: 'linear-gradient(180deg, rgba(255, 206, 103, 0.22) 0%, rgba(253, 237, 202, 0) 100%)' }}
       >
         <div className="max-w-[1440px] mx-auto py-20">
           <h2 className="text-center text-[#F17228] text-5xl font-bold mb-20">Como funciona</h2>
-          <div className="flex justify-center gap-8">
+          <div className="flex flex-wrap justify-center gap-8">
             <div className="w-[307px] flex flex-col items-center">
               <MapPinHouse className="size-28 mb-10" fill='#ffb30e' />
               <strong className="font-bold text-2xl text-[#434343] mb-2.5">Selecione o local</strong>
