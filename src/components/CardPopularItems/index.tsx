@@ -3,7 +3,7 @@ import hamburguer from '../../assets/popular-items/hamburguer.jpg'
 
 export function CardPopularItems() {
   return (
-    <div className="w-72 flex flex-col gap-2 text-[22px]">
+    <div className="w-72 flex flex-col gap-2 text-[22px] my-8 sm:my-0">
       <img className='rounded-2xl object-cover' src={hamburguer} alt="" />
       <strong className='text-[#424242] font-bold'>Hambúrguer Picanha na Brasa</strong>
       <span className='flex items-center gap-1'>

@@ -3,7 +3,7 @@ import hamburgueria from '../../assets/featured-restaurants/hamburgueria.jpg'
 
 export function CardFeaturedRestaurants() {
   return (
-    <div className='w-[357px] mb-16'>
+    <div className='w-[327px] sm:w-[357px] mb-16'>
       <div className='relative mb-6'>
         <img className='h-[300px] w-full object-cover rounded-2xl' src={hamburgueria} alt="" />
         <div className='absolute text-white font-bold text-xl top-6 left-6 flex gap-2'>

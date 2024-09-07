@@ -4,9 +4,9 @@ import { Heart, Mail } from "lucide-react";
 export function Footer() {
   return (
     <footer className="bg-[#212121] text-white">
-      <div className="max-w-[1440px] mx-auto py-16">
-        <div className="flex items-center justify-between">
-          <div className="flex gap-28">
+      <div className="max-w-[1440px] mx-auto py-16 flex flex-col px-4 xl:px-0">
+        <div className="flex flex-col lg:flex-row gap-20 lg:gap-0 items-center justify-between">
+          <div className="flex flex-col sm:flex-row gap-12 md:gap-28 lg:gap-12 xl:gap-28">
             <ul className="flex flex-col gap-1">
               <a href="">
                 <li className="font-bold text-[22px] mb-10">Empresa</li>
@@ -67,8 +67,8 @@ export function Footer() {
               </a>
             </div>
             <p>Receba ofertas exclusivas em sua caixa de correio</p>
-            <div className='flex items-center gap-4 py-6'>
-              <div className="relative flex items-center flex-1">
+            <div className='flex flex-col sm:flex-row items-center gap-4 py-6'>
+              <div className="relative flex items-center flex-1 w-full sm:w-auto">
                 <label htmlFor="searchInputFooter" className="absolute left-[18px] cursor-text">
                   <Mail fill='#adadad' />
                 </label>
@@ -79,7 +79,7 @@ export function Footer() {
                   placeholder="Insira seu e-mail"
                 />
               </div>
-              <button className="py-3 px-6 rounded-lg text-white font-bold" style={{ backgroundImage: 'linear-gradient(90deg, #FFBA26 0%, #FF9A0E 100%)' }}>
+              <button className="w-full sm:w-auto py-3 px-6 rounded-lg text-white font-bold" style={{ backgroundImage: 'linear-gradient(90deg, #FFBA26 0%, #FF9A0E 100%)' }}>
                 Inscrever-se
               </button>
             </div>
@@ -88,7 +88,7 @@ export function Footer() {
 
         <hr className="border-t-2 border-gray-300 my-10" />
 
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-0 items-center justify-between text-center md:text-start">
           <p>Todos os direitos reservados &copy; <strong className="font-bold">FoodWagon, 2024</strong></p>
           <p className="flex">Feito com carinho<Heart className="mx-1" fill="#FDBC30" color="#FDBC30" /> por<a className="ml-1 font-bold" href="https://www.figma.com/community/file/996012879169900959/foodwagon-food-delivery-landing-template-by-themewagon" target="_blank">Themewagon</a></p>
         </div>
