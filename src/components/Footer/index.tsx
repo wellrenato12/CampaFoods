@@ -4,7 +4,7 @@ import { Heart, Mail } from "lucide-react";
 export function Footer() {
   return (
     <footer className="bg-[#212121] text-white">
-      <div className="max-w-[1440px] mx-auto py-16 flex flex-col px-4 xl:px-0">
+      <div className="max-w-[1440px] mx-auto pb-24 pt-16 md:py-16 flex flex-col px-4 xl:px-0">
         <div className="flex flex-col lg:flex-row gap-20 lg:gap-0 items-center justify-between">
           <div className="flex flex-col sm:flex-row gap-12 md:gap-28 lg:gap-12 xl:gap-28">
             <ul className="flex flex-col gap-1">

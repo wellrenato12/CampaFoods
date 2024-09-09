@@ -1,4 +1,3 @@
-import { Header } from "../../components/Header";
 import { Bike, BriefcaseBusiness, CircleDollarSign, ConciergeBell, Donut, MapPin, MapPinHouse, Search } from "lucide-react";
 import { CardFoodDescont } from "../../components/CardFoodDescont";
 import { PopularItems } from "./popular-items";
@@ -10,12 +9,10 @@ import pizzaHome from '../../assets/pizza-home.svg'
 import pizzaOffer from '../../assets/popular-items/pizza.jpg'
 import churrascoOffer from '../../assets/popular-items/churrasco.jpg'
 import marmitaOffer from '../../assets/popular-items/frango.jpg'
-import { Footer } from "../../components/Footer";
 
 export function Home() {
   return (
     <div>
-      <Header />
       <div className="bg-no-repeat bg-cover" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <div className="relative max-w-[1440px] h-auto xl:h-[620px] px-4 xl:px-0 pt-3 sm:pt-12 xl:pt-0 mx-auto flex flex-col xl:flex-row items-center justify-between gap-8 xl:gap-0">
           <div className="md:w-[750px] space-y-8">
@@ -121,7 +118,6 @@ export function Home() {
         description="Aproveite o tamanho generoso das pizzas, com fatias perfeitas e recheio em abundância."
         img={pizzaOffer}
       />
-      <Footer />
     </div>
   )
 }
