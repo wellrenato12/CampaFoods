@@ -1,16 +1,23 @@
 import { MapPin } from 'lucide-react'
-import hamburguer from '../../assets/popular-items/hamburguer.jpg'
+import { formatCurrencyBRL } from '../../utils/formatCurrencyBRL';
 
-export function CardPopularItems() {
+interface CardPopularItemsProps {
+  name: string;
+  restaurant: string;
+  price: number;
+  image: string;
+}
+
+export function CardPopularItems({ name, restaurant, price, image }: CardPopularItemsProps) {
   return (
     <div className="w-72 flex flex-col gap-2 text-[22px] my-8 sm:my-0">
-      <img className='rounded-2xl object-cover' src={hamburguer} alt="" />
-      <strong className='text-[#424242] font-bold'>Hambúrguer Picanha na Brasa</strong>
+      <img className='rounded-2xl size-[283px] object-cover' src={image} alt="" />
+      <strong className='text-[#424242] font-bold'>{name}</strong>
       <span className='flex items-center gap-1'>
         <MapPin fill='#ffb30e' className="text-white" />
-        Brasa Burger & Grill
+        {restaurant}
       </span>
-      <span className='text-[#212121] font-bold'>R$ 28,90</span>
+      <span className='text-[#212121] font-bold'>{formatCurrencyBRL(price)}</span>
       <button className='py-3 bg-[#f17228] text-white rounded-lg'>
         Peça agora
       </button>

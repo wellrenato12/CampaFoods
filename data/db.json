@@ -1,0 +1,292 @@
+{
+  "offers": [
+    {
+      "id": 1,
+      "name": "Hambúrguer",
+      "restaurant": "Brasa Burger & Grill",
+      "image": "./src/assets/",
+      "discount": 20,
+      "daysRemaining": 5
+    },
+    {
+      "id": 2,
+      "name": "Açaí",
+      "restaurant": "Açaí Tropical Delights",
+      "image": "https://meusite.com/images/acai.jpg",
+      "discount": 15,
+      "daysRemaining": 3
+    },
+    {
+      "id": 3,
+      "name": "Marmita de Frango",
+      "restaurant": "Marmitas da Roça",
+      "image": "https://meusite.com/images/marmita-frango.jpg",
+      "discount": 10,
+      "daysRemaining": 2
+    },
+    {
+      "id": 4,
+      "name": "Churrasco",
+      "restaurant": "Churrascaria do Sul",
+      "image": "https://meusite.com/images/churrasco.jpg",
+      "discount": 25,
+      "daysRemaining": 4
+    }
+  ],
+  "popular": [
+    {
+      "id": 1,
+      "name": "Pizza",
+      "restaurant": "Pizzaria Sabores da Terra",
+      "image": "./src/assets/popular-items/pizza.jpg",
+      "price": 39.90
+    },
+    {
+      "id": 2,
+      "name": "Cachorro-Quente",
+      "restaurant": "Hot Dog Carioca",
+      "image": "./src/assets/popular-items/cachorro-quente.jpg",
+      "price": 15.00
+    },
+    {
+      "id": 3,
+      "name": "Churrasco",
+      "restaurant": "Churrascaria do Sul",
+      "image": "./src/assets/popular-items/churrasco.jpg",
+      "price": 49.90
+    },
+    {
+      "id": 4,
+      "name": "Feijoada",
+      "restaurant": "Feijoada do Chef",
+      "image": "./src/assets/popular-items/feijoada.jpg",
+      "price": 25.00
+    },
+    {
+      "id": 5,
+      "name": "Bolo",
+      "restaurant": "Bolos da Vovó",
+      "image": "./src/assets/popular-items/bolo.jpg",
+      "price": 10.00
+    },
+    {
+      "id": 6,
+      "name": "Salgados",
+      "restaurant": "Salgadinhos Brasileiros",
+      "image": "./src/assets/popular-items/salgados.jpg",
+      "price": 5.00
+    },
+    {
+      "id": 7,
+      "name": "Comida Japonesa",
+      "restaurant": "Sushi & Sashimi Brasil",
+      "image": "./src/assets/popular-items/comida-japonesa.jpg",
+      "price": 59.90
+    },
+    {
+      "id": 8,
+      "name": "Açaí",
+      "restaurant": "Açaí Tropical Delights",
+      "image": "./src/assets/popular-items/acai.jpg",
+      "price": 20.00
+    },
+    {
+      "id": 9,
+      "name": "Marmita de Frango",
+      "restaurant": "Marmitas da Roça",
+      "image": "./src/assets/popular-items/frango.jpg",
+      "price": 15.90
+    },
+    {
+      "id": 10,
+      "name": "Hambúrguer",
+      "restaurant": "Hamburgueria Gourmet",
+      "image": "./src/assets/popular-items/hamburguer.jpg",
+      "price": 35.00
+    }
+  ],
+  "featured_restaurants": [
+    {
+      "id": 1,
+      "name": "Feijoada do Chef",
+      "image": "https://meusite.com/images/feijoada.jpg",
+      "rating": 4.8,
+      "status": true,
+      "discount": 10
+    },
+    {
+      "id": 2,
+      "name": "Bolos da Vovó",
+      "image": "https://meusite.com/images/bolo.jpg",
+      "rating": 4.5,
+      "status": false,
+      "discount": 20
+    },
+    {
+      "id": 3,
+      "name": "Salgadinhos Brasileiros",
+      "image": "https://meusite.com/images/salgados.jpg",
+      "rating": 4.9,
+      "status": true,
+      "discount": 5
+    },
+    {
+      "id": 4,
+      "name": "Sushi & Sashimi Brasil",
+      "image": "https://meusite.com/images/comida-japonesa.jpg",
+      "rating": 4.7,
+      "status": true,
+      "discount": 15
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Hambúrguer",
+      "image": "https://meusite.com/images/categoria-hamburguer.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Comida Japonesa",
+      "image": "https://meusite.com/images/categoria-comida-japonesa.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Pizza",
+      "image": "https://meusite.com/images/categoria-pizza.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Açaí",
+      "image": "https://meusite.com/images/categoria-acai.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Churrasco",
+      "image": "https://meusite.com/images/categoria-churrasco.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Feijoada",
+      "image": "https://meusite.com/images/categoria-feijoada.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Bolos",
+      "image": "https://meusite.com/images/categoria-bolos.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Salgados",
+      "image": "https://meusite.com/images/categoria-salgados.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Comida Italiana",
+      "image": "https://meusite.com/images/categoria-comida-italiana.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Marmita",
+      "image": "https://meusite.com/images/categoria-marmita.jpg"
+    }
+  ],
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Brasa Burger & Grill",
+      "category": "Hambúrguer",
+      "image": "https://meusite.com/images/restaurante-brasa-burger.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Açaí Tropical Delights",
+      "category": "Açaí",
+      "image": "https://meusite.com/images/restaurante-acai.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Marmitas da Roça",
+      "category": "Marmita",
+      "image": "https://meusite.com/images/restaurante-marmitas.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Pizzaria Sabores da Terra",
+      "category": "Pizza",
+      "image": "https://meusite.com/images/restaurante-pizza.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Hot Dog Carioca",
+      "category": "Cachorro-Quente",
+      "image": "https://meusite.com/images/restaurante-hot-dog.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Churrascaria do Sul",
+      "category": "Churrasco",
+      "image": "https://meusite.com/images/restaurante-churrasco.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Feijoada do Chef",
+      "category": "Feijoada",
+      "image": "https://meusite.com/images/restaurante-feijoada.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Bolos da Vovó",
+      "category": "Bolos",
+      "image": "https://meusite.com/images/restaurante-bolos.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Salgadinhos Brasileiros",
+      "category": "Salgados",
+      "image": "https://meusite.com/images/restaurante-salgados.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Sushi & Sashimi Brasil",
+      "category": "Comida Japonesa",
+      "image": "https://meusite.com/images/restaurante-comida-japonesa.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Cantina Italiana",
+      "category": "Comida Italiana",
+      "image": "https://meusite.com/images/restaurante-cantina.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Esfirra Express",
+      "category": "Esfirras",
+      "image": "https://meusite.com/images/restaurante-esfirra.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Frango Assado da Vovó",
+      "category": "Frango Assado",
+      "image": "https://meusite.com/images/restaurante-frango-assado.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Hamburgueria Gourmet",
+      "category": "Hambúrguer",
+      "image": "https://meusite.com/images/restaurante-hamburgueria-gourmet.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Sorveteria Tropical",
+      "category": "Sorvetes",
+      "image": "https://meusite.com/images/restaurante-sorveteria.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Doces da Cidade",
+      "category": "Doces",
+      "image": "https://meusite.com/images/restaurante-doces.jpg"
+    }
+  ]
+}

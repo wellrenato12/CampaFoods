@@ -2,35 +2,40 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { CardPopularItems } from "../../components/CardPopularItems";
 import { SwiperSlide, Swiper } from "swiper/react";
 import { Swiper as SwiperType } from "swiper";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useResizeHandler } from "../../utils/useResizeHandler";
+import { api } from "../../lib/axios";
+
+interface PopularItemsProps {
+  id: number;
+  name: string;
+  restaurant: string;
+  price: number;
+  image: string;
+}
 
 export function PopularItems() {
+  const [popularItems, setPopularItems] = useState<PopularItemsProps[]>([])
   const swiperRef = useRef<SwiperType | null>(null);
   const slidePerView = useResizeHandler()
-  // const [slidePerView, setSlidePerView] = useState(4)
 
-  // function handleResize() {
-  //   if (window.innerWidth >= 1536) {
-  //     setSlidePerView(4)
-  //   } else if (window.innerWidth >= 1280) {
-  //     setSlidePerView(3)
-  //   } else if (window.innerWidth >= 768) {
-  //     setSlidePerView(2)
-  //   } else {
-  //     setSlidePerView(1)
-  //   }
-  // }
+  async function fetchPopularItems() {
+    try {
+      const response = await api.get('/popular')
+      setPopularItems(response.data)
+      console.log(response.data)
+    } catch (error) {
+      console.error('Erro ao buscar os itens populares: ', error)
+    }
+  }
 
-  // useEffect(() => {
-  //   handleResize()
+  useEffect(() => {
+    fetchPopularItems()
+  }, [])
 
-  //   window.addEventListener("resize", handleResize)
-
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize)
-  //   }
-  // }, [])
+  useEffect(() => {
+    console.log(popularItems)
+  }, [popularItems])
 
   return (
     <div className="relative">
@@ -47,30 +52,18 @@ export function PopularItems() {
           slidesPerView={slidePerView}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
-          <SwiperSlide className="flex justify-center">
-            <CardPopularItems />
-          </SwiperSlide>
-          <SwiperSlide className="flex justify-center">
-            <CardPopularItems />
-          </SwiperSlide>
-          <SwiperSlide className="flex justify-center">
-            <CardPopularItems />
-          </SwiperSlide>
-          <SwiperSlide className="flex justify-center">
-            <CardPopularItems />
-          </SwiperSlide>
-          <SwiperSlide className="flex justify-center">
-            <CardPopularItems />
-          </SwiperSlide>
-          <SwiperSlide className="flex justify-center">
-            <CardPopularItems />
-          </SwiperSlide>
-          <SwiperSlide className="flex justify-center">
-            <CardPopularItems />
-          </SwiperSlide>
-          <SwiperSlide className="flex justify-center">
-            <CardPopularItems />
-          </SwiperSlide>
+          {popularItems.map((item) => {
+            return (
+              <SwiperSlide key={item.id} className="flex justify-center">
+                <CardPopularItems 
+                  name={item.name} 
+                  image={item.image} 
+                  restaurant={item.restaurant} 
+                  price={item.price} 
+                />
+              </SwiperSlide>
+            )
+          })}
         </Swiper>
 
         <button

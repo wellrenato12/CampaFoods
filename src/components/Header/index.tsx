@@ -71,10 +71,10 @@ export function Header() {
         {pageSize.width > 768 && (
           <div className='flex items-center gap-6'>
             <button
-              className='flex items-center gap-2.5 text-[#ffb30e] text-lg font-bold px-4 py-3.5 shadow-button-login rounded-lg'
+              className="flex items-center gap-2.5 text-[#ffb30e] text-lg font-bold px-4 py-3.5 shadow-button-login rounded-lg transition duration-300 ease-in-out transform hover:bg-[#ffb30e] hover:text-white hover:scale-105 hover:shadow-lg"
               onClick={openProfileDrawer}
             >
-              <User fill='#ffb30e' />
+              <User className="fill-current " />
               Login
             </button>
             <button
