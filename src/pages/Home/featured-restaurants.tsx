@@ -14,6 +14,14 @@ export function FeaturedRestaurants() {
         <CardFeaturedRestaurants />
         <CardFeaturedRestaurants />
         <CardFeaturedRestaurants />
+        <CardFeaturedRestaurants />
+        <CardFeaturedRestaurants />
+        <CardFeaturedRestaurants />
+        <CardFeaturedRestaurants />
+        <CardFeaturedRestaurants />
+        <CardFeaturedRestaurants />
+        <CardFeaturedRestaurants />
+        <CardFeaturedRestaurants />
       </div>
       <button className="flex items-center gap-2.5 px-12 py-5 rounded-lg text-white font-bold mt-4 mx-auto" style={{ backgroundImage: 'linear-gradient(90deg, #FFBA26 0%, #FF9A0E 100%)' }}>
         Ver tudo
