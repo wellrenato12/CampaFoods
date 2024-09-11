@@ -9,8 +9,33 @@ import pizzaHome from '../../assets/pizza-home.svg'
 import pizzaOffer from '../../assets/popular-items/pizza.jpg'
 import churrascoOffer from '../../assets/popular-items/churrasco.jpg'
 import marmitaOffer from '../../assets/popular-items/frango.jpg'
+import { useEffect, useState } from "react";
+import { api } from "../../lib/axios";
+
+interface Offers {
+  id: number;
+  name: string;
+  image: string;
+  discount: number;
+  daysRemaining: number;
+}
 
 export function Home() {
+  const [offers, setOffers] = useState<Offers[]>([])
+
+  async function fetchOffers() {
+    try {
+      const response = await api.get('/offers')
+      setOffers(response.data)
+    } catch (error) {
+      console.error('Erro ao buscar ofertas: ', error)
+    }
+  }
+
+  useEffect(() => {
+    fetchOffers()
+  }, [])
+
   return (
     <div>
       <div className="bg-no-repeat bg-cover" style={{ backgroundImage: `url(${backgroundImage})` }}>
@@ -46,14 +71,16 @@ export function Home() {
                     placeholder="Digite sua comida"
                   />
                 </div>
-                <button className="flex justify-center sm:justify-start px-6 py-4 rounded-lg gap-2.5 text-white font-bold" style={{ backgroundImage: 'linear-gradient(90deg, #FF7A7A 0%, #F65900 100%)' }}>
+                <button className="flex justify-center sm:justify-start px-6 py-4 rounded-lg gap-2.5 text-white font-bold transition-all duration-300 hover:scale-105 hover:brightness-110" style={{ backgroundImage: 'linear-gradient(90deg, #FF7A7A 0%, #F65900 100%)' }}>
                   <Search />
                   Encontrar comida
                 </button>
+
               </div>
             </div>
           </div>
           <img
+            loading="lazy"
             className="xl:object-cover xl:absolute xl:right-0 xl:bottom-0 size-[250px] sm:size-[350px] xl:size-auto"
             src={pizzaHome}
             alt="Imagem de um pizza"
@@ -61,10 +88,17 @@ export function Home() {
         </div>
       </div>
       <div className="max-w-[1440px] mx-auto grid justify-items-center grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 mb-20">
-        <CardFoodDescont />
-        <CardFoodDescont />
-        <CardFoodDescont />
-        <CardFoodDescont />
+        {offers.map((item) => {
+          return (
+            <CardFoodDescont
+              key={item.id}
+              name={item.name}
+              image={item.image}
+              discount={item.discount}
+              daysRemaining={item.daysRemaining}
+            />
+          )
+        })}
       </div>
       <div
         className="h-auto"

@@ -7,19 +7,22 @@ import 'swiper/css/scrollbar';
 import { ChakraProvider } from "@chakra-ui/react";
 import { Restaurants } from "./pages/Restaurants";
 import { DefaultLayout } from "./layouts/DefaultLayout";
+import { DeliveryProvider } from "./context/DeliveryContext";
 
 export function App() {
   return (
-    <ChakraProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<DefaultLayout />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/restaurantes" element={<Restaurants />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </ChakraProvider>
+    <DeliveryProvider>
+      <ChakraProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<DefaultLayout />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/restaurantes" element={<Restaurants />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </ChakraProvider>
+    </DeliveryProvider>
   )
 }

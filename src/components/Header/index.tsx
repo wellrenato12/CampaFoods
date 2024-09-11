@@ -1,5 +1,5 @@
 import { MapPin, ShoppingCart, User } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { MenuMobile } from '../MenuMobile'
 import {
   useDisclosure,
@@ -7,8 +7,11 @@ import {
 import logo from '../../assets/logo.svg'
 import { Profile } from '../Profile'
 import { Cart } from '../Cart'
+import { DeliveryContext } from '../../context/DeliveryContext'
 
 export function Header() {
+  const { hasUser } = useContext(DeliveryContext)
+
   const {
     isOpen: isProfileOpen,
     onOpen: openProfileDrawer,
@@ -57,7 +60,7 @@ export function Header() {
     <>
       <header className="max-w-[1440px] mx-auto flex flex-col gap-2 sm:gap-0 sm:flex-row items-center justify-between py-5 sm:px-5 2xl:px-0">
         <div className='flex items-center gap-1'>
-          <img className="size-7" src={logo} alt="Imagem da logo" />
+          <img loading="lazy" className="size-7" src={logo} alt="Imagem da logo" />
           <div className="text-2xl md:text-3xl font-bold">
             <span className="text-[#f17228]">food</span>
             <span className="text-[#ffb30e]">wagon</span>
@@ -70,13 +73,17 @@ export function Header() {
         </div>
         {pageSize.width > 768 && (
           <div className='flex items-center gap-6'>
-            <button
-              className="flex items-center gap-2.5 text-[#ffb30e] text-lg font-bold px-4 py-3.5 shadow-button-login rounded-lg transition duration-300 ease-in-out transform hover:bg-[#ffb30e] hover:text-white hover:scale-105 hover:shadow-lg"
-              onClick={openProfileDrawer}
-            >
-              <User className="fill-current " />
-              Login
-            </button>
+            {hasUser ? (
+              <div>teste</div>
+            ) : (
+              <button
+                className="flex items-center gap-2.5 text-[#ffb30e] text-lg font-bold px-4 py-3.5 shadow-button-login rounded-lg transition duration-300 ease-in-out transform hover:bg-[#ffb30e] hover:text-white hover:scale-105 hover:shadow-lg"
+                onClick={openProfileDrawer}
+              >
+                <User className="fill-current " />
+                Login
+              </button>
+            )}
             <button
               onClick={openCartDrawer}
               className='flex items-center gap-2 hover:bg-gray-100 p-2 rounded-lg transition-all'
@@ -89,10 +96,10 @@ export function Header() {
             </button>
           </div>
         )}
-      </header>
+      </header >
       {pageSize.width <= 768 && <MenuMobile isOpen={isProfileOpen} onOpen={openProfileDrawer} onClose={closeProfileDrawer} />}
 
-      <Profile isOpen={isProfileOpen} onClose={closeProfileDrawer} />
+      < Profile isOpen={isProfileOpen} onClose={closeProfileDrawer} />
 
       <Cart isOpen={isCartOpen} onClose={closeCartDrawer} />
     </>

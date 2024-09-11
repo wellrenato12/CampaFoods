@@ -121,7 +121,7 @@ export function MenuMobile({ isOpen, onClose }: MenuMobileProps) {
                     <DrawerContent>
                       <DrawerCloseButton />
                       <DrawerBody className="flex flex-col items-center justify-center">
-                        <img src={sacola} alt="Sacola vazia" />
+                        <img loading="lazy" src={sacola} alt="Sacola vazia" />
                         <p className="font-semibold text-lg">Sua sacola está vazia</p>
                         <p className="text-gray-400 text-sm">Adicione itens</p>
                       </DrawerBody>

@@ -23,7 +23,6 @@ export function PopularItems() {
     try {
       const response = await api.get('/popular')
       setPopularItems(response.data)
-      console.log(response.data)
     } catch (error) {
       console.error('Erro ao buscar os itens populares: ', error)
     }
@@ -33,16 +32,12 @@ export function PopularItems() {
     fetchPopularItems()
   }, [])
 
-  useEffect(() => {
-    console.log(popularItems)
-  }, [popularItems])
-
   return (
     <div className="relative">
       <h2 className="text-[43px] font-bold text-center mb-[88px]">Populares</h2>
       <div className="flex items-center justify-center gap-12 max-w-[1920px] mx-auto px-4">
         <button
-          className="absolute top-[86px] left-1/4 sm:static bg-[#faaa01] rounded-full text-white shadow-button-carousel"
+          className="bg-[#faaa01] rounded-full text-white shadow-button-carousel transition-all duration-300 ease-in-out hover:bg-[#e89c00] hover:shadow-lg hover:scale-105"
           onClick={() => swiperRef.current?.slidePrev()}
         >
           <ChevronLeft className="size-14 mx-auto" />
@@ -55,11 +50,11 @@ export function PopularItems() {
           {popularItems.map((item) => {
             return (
               <SwiperSlide key={item.id} className="flex justify-center">
-                <CardPopularItems 
-                  name={item.name} 
-                  image={item.image} 
-                  restaurant={item.restaurant} 
-                  price={item.price} 
+                <CardPopularItems
+                  name={item.name}
+                  image={item.image}
+                  restaurant={item.restaurant}
+                  price={item.price}
                 />
               </SwiperSlide>
             )
@@ -67,7 +62,7 @@ export function PopularItems() {
         </Swiper>
 
         <button
-          className="absolute top-[86px] right-1/4 sm:static bg-[#faaa01] rounded-full text-white shadow-button-carousel"
+          className="bg-[#faaa01] rounded-full text-white shadow-button-carousel transition-all duration-300 ease-in-out hover:bg-[#e89c00] hover:shadow-lg hover:scale-105"
           onClick={() => swiperRef.current?.slideNext()}
         >
           <ChevronRight className="size-14 mx-auto" />
