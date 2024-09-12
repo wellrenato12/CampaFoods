@@ -1,9 +1,11 @@
 import { createContext, useState, type ReactNode } from "react";
+// import { useNavigate } from "react-router-dom";
 
 interface DeliveryContextProps {
   handleHasUser: () => void;
   saveUser: (user: User) => void
   handleSearchCep: (cep: CEP) => void
+  handleNavigateRestaurantDishes: (id: number) => void
   hasUser: boolean;
   user: User | null
   cep: CEP | null
@@ -30,6 +32,13 @@ export function DeliveryProvider({ children }: DeliveryProviderProps) {
   const [cep, setCep] = useState<CEP | null>(null)
   const [user, setUser] = useState<User | null>(null)
   const [hasUser, setHasUser] = useState(false)
+  // const navigate = useNavigate()
+
+
+  function handleNavigateRestaurantDishes(id: number) {
+    // navigate(`/restaurante/${id}`)
+    console.log('clicou')
+  }
 
   function handleSearchCep(cep: CEP) {
     setCep(cep)
@@ -55,7 +64,8 @@ export function DeliveryProvider({ children }: DeliveryProviderProps) {
       saveUser,
       user,
       handleSearchCep,
-      cep
+      cep,
+      handleNavigateRestaurantDishes
     }}>
       {children}
     </DeliveryContext.Provider>

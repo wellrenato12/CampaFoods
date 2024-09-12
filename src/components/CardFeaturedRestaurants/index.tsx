@@ -1,6 +1,8 @@
 import { Clock5, Star, Tag } from 'lucide-react'
+import { useNavigate } from 'react-router-dom';
 
 interface CardFeaturedRestaurantsProps {
+  id: number;
   name: string;
   image: string;
   logo: string;
@@ -9,9 +11,19 @@ interface CardFeaturedRestaurantsProps {
   discount: number;
 }
 
-export function CardFeaturedRestaurants({ name, image, logo, rating, status, discount }: CardFeaturedRestaurantsProps) {
+
+export function CardFeaturedRestaurants({ id, name, image, logo, rating, status, discount }: CardFeaturedRestaurantsProps) {
+  const navigate = useNavigate()
+
+  function handleNavigateRestaurantDishes(id: number) {
+    navigate(`/restaurante/${id}`)
+  }
+
   return (
-    <div className='w-[327px] sm:w-[357px] mb-16'>
+    <div
+      onClick={() => handleNavigateRestaurantDishes(id)}
+      className='cursor-pointer w-[327px] sm:w-[357px] mb-16'
+    >
       <div className='relative mb-6'>
         <img loading="lazy" className='h-[300px] w-full object-cover rounded-2xl' src={image} alt="" />
         <div className='absolute text-white font-bold text-xl top-6 left-6 flex gap-2'>

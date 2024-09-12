@@ -43,6 +43,7 @@ export function FeaturedRestaurants() {
           return (
             <CardFeaturedRestaurants
               key={restaurant.id}
+              id={restaurant.id}
               name={restaurant.name}
               image={restaurant.image}
               logo={restaurant.logo}
