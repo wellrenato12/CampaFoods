@@ -2,6 +2,7 @@ import { ChevronRight } from "lucide-react";
 import { CardFeaturedRestaurants } from "../../components/CardFeaturedRestaurants";
 import { useEffect, useState } from "react";
 import { api } from "../../lib/axios";
+import { useNavigate } from "react-router-dom";
 
 interface Restaurants {
   id: number;
@@ -15,6 +16,7 @@ interface Restaurants {
 
 export function FeaturedRestaurants() {
   const [restaurants, setRestaurants] = useState<Restaurants[]>([])
+  const navigate = useNavigate()
 
   async function fetchRestaurants() {
     try {
@@ -23,6 +25,10 @@ export function FeaturedRestaurants() {
     } catch (error) {
       console.error('Erro ao buscar restaurantes: ', error)
     }
+  }
+
+  function navigateRestaurants() {
+    navigate('/restaurantes')
   }
 
   useEffect(() => {
@@ -47,7 +53,7 @@ export function FeaturedRestaurants() {
           )
         })}
       </div>
-      <button className="flex items-center gap-2.5 px-12 py-5 rounded-lg text-white font-bold mt-4 mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-gradient-to-r hover:from-yellow-400 hover:to-orange-400" style={{ backgroundImage: 'linear-gradient(90deg, #FFBA26 0%, #FF9A0E 100%)' }}>
+      <button onClick={navigateRestaurants} className="flex items-center gap-2.5 px-12 py-5 rounded-lg text-white font-bold mt-4 mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-gradient-to-r hover:from-yellow-400 hover:to-orange-400" style={{ backgroundImage: 'linear-gradient(90deg, #FFBA26 0%, #FF9A0E 100%)' }}>
         Ver tudo
         <ChevronRight />
       </button>

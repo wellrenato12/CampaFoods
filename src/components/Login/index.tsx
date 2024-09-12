@@ -38,7 +38,7 @@ type RegisterFormValues = z.infer<typeof registerSchema>
 export function Login() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [hasRegister, setHasRegister] = useState(false)
-  const { handleHasUser } = useContext(DeliveryContext)
+  const { handleHasUser, saveUser } = useContext(DeliveryContext)
 
   const initialRef = useRef(null)
   const finalRef = useRef(null)
@@ -66,10 +66,12 @@ export function Login() {
       const response = await api.get(`/users?email=${data.email}&password=${data.password}`)
 
       if (response.data.length > 0) {
+        const user = response.data[0]
         alert('Logado com sucesso!')
         resetLoginForm()
         handleHasUser()
-        onClose()
+        saveUser(user)
+        onClose();
       } else {
         console.error('Usuário não encontrado ou senha incorreta')
       }

@@ -6,10 +6,11 @@ import {
   DrawerContent,
   DrawerCloseButton,
 } from '@chakra-ui/react'
-import { CircleHelp, Heart } from 'lucide-react';
-import { useRef } from 'react';
+import { CircleHelp, Heart, LogOut } from 'lucide-react';
+import { useContext, useRef } from 'react';
 import notification from '../../assets/notificacao.png'
 import { Login } from '../Login';
+import { DeliveryContext } from '../../context/DeliveryContext';
 
 interface ProfileProps {
   isOpen: boolean
@@ -17,7 +18,9 @@ interface ProfileProps {
 }
 
 export function Profile({ isOpen, onClose }: ProfileProps) {
+  const { hasUser, user, handleHasUser } = useContext(DeliveryContext)
   const buttonRef = useRef<HTMLButtonElement | null>(null);
+
   return (
     <div>
       <>
@@ -31,7 +34,16 @@ export function Profile({ isOpen, onClose }: ProfileProps) {
           <DrawerOverlay />
           <DrawerContent>
             <DrawerCloseButton />
-            <DrawerHeader className='text-center'>Crie sua conta</DrawerHeader>
+            <DrawerHeader className='text-center'>
+              {hasUser ? (
+                <div className='flex items-center justify-center gap-4'>
+                  <img className='rounded-full size-10' src={user?.profilePicture} alt="" />
+                  {user?.name}
+                </div>
+              ) : (
+                'Crie sua conta'
+              )}
+            </DrawerHeader>
             <hr className="border-t-[2px] border-gray-100" />
             <DrawerBody className='space-y-8'>
               <div className='flex items-center bg-gray-100 rounded-lg'>
@@ -43,8 +55,17 @@ export function Profile({ isOpen, onClose }: ProfileProps) {
                 </div>
               </div>
               <button>
-                
-                <Login />
+                {hasUser ? (
+                  <button 
+                    onClick={handleHasUser}
+                    className='flex items-center gap-2 text-xl hover:text-[#ffb30e] transition-all'>
+                    <LogOut />
+                    Sair
+                  </button>
+
+                ) : (
+                  <Login />
+                )}
               </button>
               <button className='flex items-center gap-2 text-xl hover:text-[#ffb30e] transition-all'>
                 <Heart />

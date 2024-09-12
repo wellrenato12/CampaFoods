@@ -1,4 +1,4 @@
-import { MapPin, ShoppingCart, User } from 'lucide-react'
+import { LogOut, MapPin, ShoppingCart, User } from 'lucide-react'
 import { useContext, useEffect, useState } from 'react'
 import { MenuMobile } from '../MenuMobile'
 import {
@@ -8,9 +8,11 @@ import logo from '../../assets/logo.svg'
 import { Profile } from '../Profile'
 import { Cart } from '../Cart'
 import { DeliveryContext } from '../../context/DeliveryContext'
+import { Cep } from '../Cep'
+import { Link } from 'react-router-dom'
 
 export function Header() {
-  const { hasUser } = useContext(DeliveryContext)
+  const { hasUser, handleHasUser, cep } = useContext(DeliveryContext)
 
   const {
     isOpen: isProfileOpen,
@@ -61,20 +63,25 @@ export function Header() {
       <header className="max-w-[1440px] mx-auto flex flex-col gap-2 sm:gap-0 sm:flex-row items-center justify-between py-5 sm:px-5 2xl:px-0">
         <div className='flex items-center gap-1'>
           <img loading="lazy" className="size-7" src={logo} alt="Imagem da logo" />
-          <div className="text-2xl md:text-3xl font-bold">
+          <Link to="/inicio" className="text-2xl md:text-3xl font-bold">
             <span className="text-[#f17228]">food</span>
             <span className="text-[#ffb30e]">wagon</span>
+          </Link>
+        </div>
+        {cep?.address && cep?.number ? (
+          <div className='flex items-center gap-1 lg:gap-2'>
+            <MapPin fill='#ffb30e' className="text-white" />
+            <p className='text-sm lg:text-lg'><strong>{cep.address}, {cep.number}</strong></p>
           </div>
-        </div>
-
-        <div className='flex items-center gap-1 lg:gap-2'>
-          <MapPin fill='#ffb30e' className="text-white" />
-          <p className='text-sm lg:text-lg'>Localização atual <strong>Feira - Naftali Miranda, 81</strong></p>
-        </div>
+        ) : (
+          <Cep />
+        )}
         {pageSize.width > 768 && (
           <div className='flex items-center gap-6'>
             {hasUser ? (
-              <div>teste</div>
+              <button onClick={handleHasUser} title='Sair'>
+                <LogOut />
+              </button>
             ) : (
               <button
                 className="flex items-center gap-2.5 text-[#ffb30e] text-lg font-bold px-4 py-3.5 shadow-button-login rounded-lg transition duration-300 ease-in-out transform hover:bg-[#ffb30e] hover:text-white hover:scale-105 hover:shadow-lg"
