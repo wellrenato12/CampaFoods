@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { CardFeaturedRestaurants } from "../../components/CardFeaturedRestaurants";
 import { api } from "../../lib/axios";
 import {
@@ -9,24 +9,15 @@ import {
   Button,
 } from '@chakra-ui/react'
 import { ChevronDownIcon } from "lucide-react";
-
-interface Restaurants {
-  id: number;
-  name: string;
-  image: string;
-  logo: string;
-  rating: number;
-  status: boolean;
-  discount: number;
-}
+import { DeliveryContext } from "../../context/DeliveryContext";
 
 export function Restaurants() {
-  const [restaurants, setRestaurants] = useState<Restaurants[]>([])
+  const { restaurants, searchRestaurants } = useContext(DeliveryContext)
 
   async function fetchRestaurants() {
     try {
       const response = await api.get('/restaurants')
-      setRestaurants(response.data)
+      searchRestaurants(response.data)
     } catch (error) {
       console.error('Erro ao buscar restaurantes: ', error)
     }
@@ -54,7 +45,7 @@ export function Restaurants() {
         </Menu>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 justify-items-center">
-        {restaurants.map((restaurant) => {
+        {restaurants?.map((restaurant) => {
           return (
             <div
               key={restaurant.id}

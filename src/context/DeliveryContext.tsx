@@ -1,14 +1,24 @@
 import { createContext, useState, type ReactNode } from "react";
-// import { useNavigate } from "react-router-dom";
 
 interface DeliveryContextProps {
   handleHasUser: () => void;
   saveUser: (user: User) => void
   handleSearchCep: (cep: CEP) => void
-  handleNavigateRestaurantDishes: (id: number) => void
+  searchRestaurants: (restaurant: Restaurants[]) => void
   hasUser: boolean;
   user: User | null
   cep: CEP | null
+  restaurants: Restaurants[] | null
+}
+
+interface Restaurants {
+  id: number;
+  name: string;
+  image: string;
+  logo: string;
+  rating: number;
+  status: boolean;
+  discount: number;
 }
 
 interface User {
@@ -29,15 +39,13 @@ interface DeliveryProviderProps {
 export const DeliveryContext = createContext({} as DeliveryContextProps)
 
 export function DeliveryProvider({ children }: DeliveryProviderProps) {
+  const [restaurants, setRestaurants] = useState<Restaurants[]>([])
   const [cep, setCep] = useState<CEP | null>(null)
   const [user, setUser] = useState<User | null>(null)
-  const [hasUser, setHasUser] = useState(false)
-  // const navigate = useNavigate()
+  const [hasUser, setHasUser] = useState(false)  
 
-
-  function handleNavigateRestaurantDishes(id: number) {
-    // navigate(`/restaurante/${id}`)
-    console.log('clicou')
+  function searchRestaurants(restaurant: Restaurants[]) {
+    setRestaurants(restaurant)
   }
 
   function handleSearchCep(cep: CEP) {
@@ -65,7 +73,8 @@ export function DeliveryProvider({ children }: DeliveryProviderProps) {
       user,
       handleSearchCep,
       cep,
-      handleNavigateRestaurantDishes
+      searchRestaurants,
+      restaurants
     }}>
       {children}
     </DeliveryContext.Provider>

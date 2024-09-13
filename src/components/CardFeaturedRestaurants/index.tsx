@@ -11,26 +11,32 @@ interface CardFeaturedRestaurantsProps {
   discount: number;
 }
 
-
 export function CardFeaturedRestaurants({ id, name, image, logo, rating, status, discount }: CardFeaturedRestaurantsProps) {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  function handleNavigateRestaurantDishes(id: number) {
-    navigate(`/restaurante/${id}`)
+  function handleNavigateRestaurantDishes() {
+    navigate(`/restaurantes/${id}`);
   }
 
   return (
     <div
-      onClick={() => handleNavigateRestaurantDishes(id)}
+      onClick={handleNavigateRestaurantDishes}
       className='cursor-pointer w-[327px] sm:w-[357px] mb-16'
     >
       <div className='relative mb-6'>
-        <img loading="lazy" className='h-[300px] w-full object-cover rounded-2xl' src={image} alt="" />
+        <img 
+          loading="lazy" 
+          className='h-[300px] w-full object-cover rounded-2xl' 
+          src={image} 
+          alt={`${name} restaurant`} 
+        />
         <div className='absolute text-white font-bold text-xl top-6 left-6 flex gap-2'>
-          <span className='flex items-center gap-2 bg-[#f17228] px-4 py-2 rounded-lg'>
-            <Tag />
-            {discount}% off
-          </span>
+          {discount > 0 && (
+            <span className='flex items-center gap-2 bg-[#f17228] px-4 py-2 rounded-lg'>
+              <Tag />
+              {discount}% off
+            </span>
+          )}
           <span className='flex items-center gap-2 bg-[#ffb30e] px-4 py-2 rounded-lg'>
             <Clock5 />
             Rápido
@@ -38,7 +44,12 @@ export function CardFeaturedRestaurants({ id, name, image, logo, rating, status,
         </div>
       </div>
       <div className='flex items-center gap-6 mb-8'>
-        <img loading="lazy" className='size-16 rounded-lg object-cover' src={logo} alt="" />
+        <img 
+          loading="lazy" 
+          className='size-16 rounded-lg object-cover' 
+          src={logo} 
+          alt={`${name} logo`} 
+        />
         <div>
           <h4 className='text-[424242] font-bold text-[22px]'>{name}</h4>
           <span className='flex items-center gap-2 text-[#ffb30e]'>
@@ -57,5 +68,5 @@ export function CardFeaturedRestaurants({ id, name, image, logo, rating, status,
         </span>
       )}
     </div>
-  )
+  );
 }

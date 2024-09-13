@@ -3,28 +3,28 @@
     {
       "id": "1",
       "name": "Hambúrguer",
-      "image": "./src/assets/offers/hamburguer-oferta.jpg",
+      "image": "assets/offers/hamburguer-oferta.jpg",
       "discount": 20,
       "daysRemaining": 5
     },
     {
       "id": "2",
       "name": "Marmita de Frango",
-      "image": "./src/assets/offers/marmita-oferta.jpg",
+      "image": "assets/offers/marmita-oferta.jpg",
       "discount": 10,
       "daysRemaining": 2
     },
     {
       "id": "3",
       "name": "Vegano",
-      "image": "./src/assets/offers/vegano-oferta.svg",
+      "image": "assets/offers/vegano-oferta.svg",
       "discount": 15,
       "daysRemaining": 3
     },
     {
       "id": "4",
       "name": "Pizza Portuguesa",
-      "image": "./src/assets/offers/pizza-oferta.jpg",
+      "image": "assets/offers/pizza-oferta.jpg",
       "discount": 25,
       "daysRemaining": 4
     }
@@ -34,70 +34,70 @@
       "id": "1",
       "name": "Pizza",
       "restaurant": "Pizzaria Sabores da Terra",
-      "image": "./src/assets/popular-items/pizza.jpg",
+      "image": "assets/popular-items/pizza.jpg",
       "price": 39.9
     },
     {
       "id": "2",
       "name": "Cachorro-Quente",
       "restaurant": "Hot Dog Carioca",
-      "image": "./src/assets/popular-items/cachorro-quente.jpg",
+      "image": "assets/popular-items/cachorro-quente.jpg",
       "price": 15
     },
     {
       "id": "3",
       "name": "Churrasco",
       "restaurant": "Churrascaria do Sul",
-      "image": "./src/assets/popular-items/churrasco.jpg",
+      "image": "assets/popular-items/churrasco.jpg",
       "price": 49.9
     },
     {
       "id": "4",
       "name": "Feijoada",
       "restaurant": "Feijoada do Chef",
-      "image": "./src/assets/popular-items/feijoada.jpg",
+      "image": "assets/popular-items/feijoada.jpg",
       "price": 25
     },
     {
       "id": "5",
       "name": "Bolo",
       "restaurant": "Bolos da Vovó",
-      "image": "./src/assets/popular-items/bolo.jpg",
+      "image": "assets/popular-items/bolo.jpg",
       "price": 10
     },
     {
       "id": "6",
       "name": "Salgados",
       "restaurant": "Salgadinhos Brasileiros",
-      "image": "./src/assets/popular-items/salgados.jpg",
+      "image": "assets/popular-items/salgados.jpg",
       "price": 5
     },
     {
       "id": "7",
       "name": "Comida Japonesa",
       "restaurant": "Sushi & Sashimi Brasil",
-      "image": "./src/assets/popular-items/comida-japonesa.jpg",
+      "image": "assets/popular-items/comida-japonesa.jpg",
       "price": 59.9
     },
     {
       "id": "8",
       "name": "Açaí",
       "restaurant": "Açaí Tropical Delights",
-      "image": "./src/assets/popular-items/acai.jpg",
+      "image": "assets/popular-items/acai.jpg",
       "price": 20
     },
     {
       "id": "9",
       "name": "Marmita de Frango",
       "restaurant": "Marmitas da Roça",
-      "image": "./src/assets/popular-items/frango.jpg",
+      "image": "assets/popular-items/frango.jpg",
       "price": 15.9
     },
     {
       "id": "10",
       "name": "Hambúrguer",
       "restaurant": "Hamburgueria Gourmet",
-      "image": "./src/assets/popular-items/hamburguer.jpg",
+      "image": "assets/popular-items/hamburguer.jpg",
       "price": 35
     }
   ],
@@ -105,8 +105,8 @@
     {
       "id": "1",
       "name": "Feijoada do Chef",
-      "image": "./src/assets/featured-restaurants/feijoada.jpg",
-      "logo": "./src/assets/logoRestaurant/logoFeijoada.jpg",
+      "image": "assets/featured-restaurants/feijoada.jpg",
+      "logo": "assets/logoRestaurant/logoFeijoada.jpg",
       "rating": 4.8,
       "status": true,
       "discount": 10
@@ -114,8 +114,8 @@
     {
       "id": "2",
       "name": "Bolos da Vovó",
-      "image": "./src/assets/featured-restaurants/confeitaria.jpg",
-      "logo": "./src/assets/logoRestaurant/logoConfeitaria.jpg",
+      "image": "assets/featured-restaurants/confeitaria.jpg",
+      "logo": "assets/logoRestaurant/logoConfeitaria.jpg",
       "rating": 4.5,
       "status": false,
       "discount": 20
@@ -123,8 +123,8 @@
     {
       "id": "3",
       "name": "Salgadinhos Brasileiros",
-      "image": "./src/assets/featured-restaurants/salgados.jpg",
-      "logo": "./src/assets/logoRestaurant/logoSalgados.jpg",
+      "image": "assets/featured-restaurants/salgados.jpg",
+      "logo": "assets/logoRestaurant/logoSalgados.jpg",
       "rating": 4.9,
       "status": true,
       "discount": 5
@@ -132,8 +132,8 @@
     {
       "id": "4",
       "name": "Sushi & Sashimi Brasil",
-      "image": "./src/assets/featured-restaurants/comida-japonesa.jpg",
-      "logo": "./src/assets/logoRestaurant/logoComidaJaponesa.jpg",
+      "image": "assets/featured-restaurants/comida-japonesa.jpg",
+      "logo": "assets/logoRestaurant/logoComidaJaponesa.jpg",
       "rating": 4.7,
       "status": true,
       "discount": 15
@@ -143,86 +143,90 @@
     {
       "id": "1",
       "name": "Hambúrguer",
-      "image": "./src/assets/category-food/hamburguer-categoria.jpg"
+      "image": "assets/category-food/hamburguer-categoria.jpg"
     },
     {
       "id": "2",
       "name": "Comida Japonesa",
-      "image": "./src/assets/category-food/comida-japonesa-categoria.jpg"
+      "image": "assets/category-food/comida-japonesa-categoria.jpg"
     },
     {
       "id": "3",
       "name": "Pizza",
-      "image": "./src/assets/category-food/pizza-categoria.jpg"
+      "image": "assets/category-food/pizza-categoria.jpg"
     },
     {
       "id": "4",
       "name": "Açaí",
-      "image": "./src/assets/category-food/acai-categoria.jpg"
+      "image": "assets/category-food/acai-categoria.jpg"
     },
     {
       "id": "5",
       "name": "Churrasco",
-      "image": "./src/assets/category-food/churrasco-categoria.jpg"
+      "image": "assets/category-food/churrasco-categoria.jpg"
     },
     {
       "id": "6",
       "name": "Feijoada",
-      "image": "./src/assets/category-food/feijoada-categoria.jpg"
+      "image": "assets/category-food/feijoada-categoria.jpg"
     },
     {
       "id": "7",
       "name": "Bolos",
-      "image": "./src/assets/category-food/bolo-categoria.jpg"
+      "image": "assets/category-food/bolo-categoria.jpg"
     },
     {
       "id": "8",
       "name": "Salgados",
-      "image": "./src/assets/category-food/salgado-categoria.jpg"
+      "image": "assets/category-food/salgado-categoria.jpg"
     },
     {
       "id": "9",
       "name": "Cachorro quente",
-      "image": "./src/assets/category-food/hot-dog-categoria.jpg"
+      "image": "assets/category-food/hot-dog-categoria.jpg"
     },
     {
       "id": "10",
       "name": "Marmita",
-      "image": "./src/assets/category-food/marmita-categoria.jpg"
+      "image": "assets/category-food/marmita-categoria.jpg"
     }
   ],
   "restaurants": [
     {
       "id": "1",
       "name": "Brasa Burger & Grill",
-      "image": "./src/assets/featured-restaurants/hamburgueria.jpg",
-      "logo": "./src/assets/logoRestaurant/logoHamburguer.jpg",
+      "image": "../assets/featured-restaurants/hamburgueria.jpg",
+      "logo": "../assets/logoRestaurant/logoHamburguer.jpg",
       "rating": 4.5,
       "status": true,
       "discount": 10,
       "dishes": [
         {
+          "id": "1",
           "name": "Cheeseburger Clássico",
-          "image": "./src/assets/offers/cheeseburger-classico.jpg",
+          "image": "../../assets/dishes/cheeseburger.jpg",
           "price": 38.40,
           "description": "Pão artesanal, hambúrguer de carne bovina, queijo cheddar, alface, tomate e maionese especial"
         },
         {
+          "id": "2",
           "name": "Bacon Burger",
-          "image": "./src/assets/offers/bacon-burger.jpg",
+          "image": "../assets/dishes/bacon-burger.jpg",
           "price": 39.90,
           "description": "Hambúrguer de carne bovina, queijo cheddar, fatias de bacon crocante, alface e molho barbecue"
         },
         {
+          "id": "3",
           "name": "Burger Vegano",
-          "image": "./src/assets/offers/burger-vegano.jpg",
+          "image": "../assets/dishes/burguer-vegano.jpg",
           "discount": 20,
           "price": 35.60,
           "description": "Pão integral, hambúrguer de grão-de-bico, alface, tomate, cebola roxa e molho de ervas"
         },
         {
+          "id": "4",
           "name": "Double Burger",
-          "image": "./src/assets/offers/double-burger.jpg",
+          "image": "../assets/dishes/double-burguer.jpg",
           "discount": 25,
           "price": 34.00,
           "description": "Dois hambúrgueres de carne bovina, queijo cheddar duplo, bacon, alface, tomate e molho especial"
@@ -232,34 +236,38 @@
     {
       "id": "2",
       "name": "Açaí Tropical Delights",
-      "image": "./src/assets/featured-restaurants/acai.jpg",
-      "logo": "./src/assets/logoRestaurant/logoAcai.jpg",
+      "image": "../assets/featured-restaurants/acai.jpg",
+      "logo": "../assets/logoRestaurant/logoAcai.jpg",
       "rating": 4.6,
       "status": true,
       "discount": 15,
       "dishes": [
         {
+          "id": "1",
           "name": "Açaí Tradicional",
-          "image": "./src/assets/offers/acai-tradicional.jpg",
+          "image": "../assets/dishes/acai-tradicional.jpg",
           "discount": 10,
           "description": "Açaí com granola e mel",
           "price": 15.00
         },
         {
+          "id": "2",
           "name": "Açaí com Frutas",
-          "image": "./src/assets/offers/acai-com-frutas.jpg",
+          "image": "../assets/dishes/acai-frutas.jpg",
           "description": "Açaí com banana, morango, e granola",
           "price": 18.00
         },
         {
+          "id": "3",
           "name": "Açaí com Leite em Pó e Paçoca",
-          "image": "./src/assets/offers/acai-leite-pacoca.jpg",
+          "image": "../assets/dishes/acai-pacoca.jpg",
           "description": "Açaí com leite em pó, paçoca e granola",
           "price": 20.00
         },
         {
+          "id": "4",
           "name": "Açaí com Whey Protein",
-          "image": "./src/assets/offers/acai-whey.jpg",
+          "image": "../assets/dishes/acai-whey.jpg",
           "discount": 5,
           "description": "Açaí com whey protein e granola",
           "price": 22.50
@@ -269,35 +277,39 @@
     {
       "id": "3",
       "name": "Marmitas da Roça",
-      "image": "./src/assets/featured-restaurants/marmitaria.jpg",
-      "logo": "./src/assets/logoRestaurant/logoMarmitaria.jpg",
+      "image": "../assets/featured-restaurants/marmitaria.jpg",
+      "logo": "../assets/logoRestaurant/logoMarmitaria.jpg",
       "rating": 4.8,
       "status": true,
       "discount": 5,
       "dishes": [
         {
+          "id": "1",
           "name": "Marmita Simples",
-          "image": "./src/assets/offers/marmita-simples.jpg",
+          "image": "../assets/dishes/marmita-simples.jpg",
           "description": "Arroz, feijão, carne moída e salada",
           "price": 12.90
         },
         {
+          "id": "2",
           "name": "Marmita Frango Grelhado",
-          "image": "./src/assets/offers/marmita-frango.jpg",
+          "image": "../assets/dishes/marmita-frango.jpg",
           "discount": 15,
           "description": "Arroz, feijão, frango grelhado e legumes",
           "price": 14.90
         },
         {
+          "id": "3",
           "name": "Marmita Vegetariana",
-          "image": "./src/assets/offers/marmita-vegetariana.jpg",
+          "image": "../assets/dishes/marmita-vegana.jpg",
           "discount": 12,
           "description": "Arroz integral, feijão, legumes e tofu",
           "price": 16.90
         },
         {
+          "id": "4",
           "name": "Marmita Bife Acebolado",
-          "image": "./src/assets/offers/marmita-bife-acebolado.jpg",
+          "image": "../assets/dishes/marmita-carne.jpg",
           "description": "Arroz, feijão, bife acebolado e batata frita",
           "price": 17.90
         }
@@ -306,35 +318,39 @@
     {
       "id": "4",
       "name": "Pizzaria Sabores da Terra",
-      "image": "./src/assets/featured-restaurants/pizzaria.jpg",
-      "logo": "./src/assets/logoRestaurant/logoPizzaria.jpg",
+      "image": "../assets/featured-restaurants/pizzaria.jpg",
+      "logo": "../assets/logoRestaurant/logoPizzaria.jpg",
       "rating": 4.7,
       "status": true,
       "discount": 20,
       "dishes": [
         {
+          "id": "1",
           "name": "Pizza Margherita",
-          "image": "./src/assets/offers/pizza-margherita.jpg",
+          "image": "../assets/dishes/pizza-margherita.jpg",
           "discount": 10,
           "description": "Molho de tomate, queijo mussarela, manjericão fresco",
           "price": 39.90
         },
         {
+          "id": "2",
           "name": "Pizza Calabresa",
-          "image": "./src/assets/offers/pizza-calabresa.jpg",
+          "image": "../assets/dishes/pizza-calabresa.jpg",
           "discount": 15,
           "description": "Molho de tomate, queijo mussarela, calabresa e cebola",
           "price": 42.90
         },
         {
-          "name": "Pizza Quatro Queijos",
-          "image": "./src/assets/offers/pizza-quatro-queijos.jpg",
-          "description": "Molho de tomate, mussarela, parmesão, gorgonzola e provolone",
+          "id": "3",
+          "name": "Pizza Frango",
+          "image": "../assets/dishes/pizza-frango.jpg",
+          "description": "Molho de tomate, mussarela, frango desfiado, cebola e azeitonas",
           "price": 45.90
         },
         {
+          "id": "4",
           "name": "Pizza Portuguesa",
-          "image": "./src/assets/offers/pizza-portuguesa.jpg",
+          "image": "../assets/dishes/pizza-portuguesa.jpg",
           "description": "Molho de tomate, mussarela, presunto, ovo, cebola e azeitona",
           "price": 43.90
         }
@@ -343,35 +359,39 @@
     {
       "id": "5",
       "name": "Hot Dog Carioca",
-      "image": "./src/assets/featured-restaurants/hot-dog.jpg",
-      "logo": "./src/assets/logoRestaurant/logoHotDog.jpg",
+      "image": "../assets/featured-restaurants/hot-dog.jpg",
+      "logo": "../assets/logoRestaurant/logoHotDog.jpg",
       "rating": 4.2,
       "status": false,
       "discount": 10,
       "dishes": [
         {
+          "id": "1",
           "name": "Cachorro-Quente Tradicional",
-          "image": "./src/assets/offers/cachorro-quente-tradicional.jpg",
+          "image": "../assets/dishes/cachorro-quente-tradicional.jpg",
           "discount": 10,
           "description": "Pão, salsicha, molho de tomate, batata palha e ketchup",
           "price": 10.00
         },
         {
+          "id": "2",
           "name": "Cachorro-Quente Completo",
-          "image": "./src/assets/offers/cachorro-quente-completo.jpg",
+          "image": "../assets/dishes/cachorro-quente-completo.jpg",
           "description": "Pão, salsicha, molho, milho, ervilha, purê de batata, queijo e bacon",
           "price": 13.50
         },
         {
+          "id": "3",
           "name": "Cachorro-Quente com Catupiry",
-          "image": "./src/assets/offers/cachorro-quente-catupiry.jpg",
+          "image": "../assets/dishes/cachorro-quente-catupiry.jpg",
           "discount": 20,
           "description": "Pão, salsicha, molho, catupiry, batata palha e queijo ralado",
           "price": 14.00
         },
         {
+          "id": "4",
           "name": "Cachorro-Quente Picante",
-          "image": "./src/assets/offers/cachorro-quente-picante.jpg",
+          "image": "../assets/dishes/cachorro-quente-picante.jpg",
           "description": "Pão, salsicha, molho picante, jalapeño, queijo cheddar e bacon",
           "price": 15.00
         }
@@ -380,34 +400,38 @@
     {
       "id": "6",
       "name": "Churrascaria do Sul",
-      "image": "./src/assets/featured-restaurants/churrascaria.jpg",
-      "logo": "./src/assets/logoRestaurant/logoChurrascaria.jpg",
+      "image": "../assets/featured-restaurants/churrascaria.jpg",
+      "logo": "../assets/logoRestaurant/logoChurrascaria.jpg",
       "rating": 4.9,
       "status": true,
       "discount": 25,
       "dishes": [
         {
+          "id": "1",
           "name": "Picanha Fatiada",
-          "image": "./src/assets/offers/picanha-fatiada.jpg",
+          "image": "../assets/dishes/picanha-fatiada.jpg",
           "description": "Picanha grelhada ao ponto, servida com farofa, vinagrete e arroz",
           "price": 59.90
         },
         {
+          "id": "2",
           "name": "Costela Bovina",
-          "image": "./src/assets/offers/costela-bovina.jpg",
+          "image": "../assets/dishes/costela-bovina.jpg",
           "description": "Costela bovina assada lentamente, acompanhada de mandioca e arroz",
           "price": 49.90
         },
         {
+          "id": "3",
           "name": "Fraldinha na Brasa",
-          "image": "./src/assets/offers/fraldinha-na-brasa.jpg",
+          "image": "../assets/dishes/fraldinha-na-brasa.jpg",
           "discount": 12,
           "description": "Fraldinha grelhada servida com batata frita e arroz",
           "price": 45.90
         },
         {
+          "id": "4",
           "name": "Espetinho Misto",
-          "image": "./src/assets/offers/espetinho-misto.jpg",
+          "image": "../assets/dishes/espetinho-misto.jpg",
           "discount": 5,
           "description": "Espetinho de carne, frango e linguiça, acompanhado de vinagrete e farofa",
           "price": 34.90
@@ -417,34 +441,38 @@
     {
       "id": "7",
       "name": "Feijoada do Chef",
-      "image": "./src/assets/featured-restaurants/feijoada.jpg",
-      "logo": "./src/assets/logoRestaurant/logoFeijoada.jpg",
+      "image": "../assets/featured-restaurants/feijoada.jpg",
+      "logo": "../assets/logoRestaurant/logoFeijoada.jpg",
       "rating": 4.8,
       "status": true,
       "discount": 10,
       "dishes": [
         {
+          "id": "1",
           "name": "Feijoada Completa",
-          "image": "./src/assets/offers/feijoada-completa.jpg",
+          "image": "../assets/dishes/feijoada-completa.jpg",
           "discount": 15,
           "description": "Feijoada tradicional com feijão preto, carne de porco, linguiça e acompanhamentos variados",
           "price": 39.90
         },
         {
+          "id": "2",
           "name": "Feijoada Simples",
-          "image": "./src/assets/offers/feijoada-simples.jpg",
+          "image": "../assets/dishes/feijoada-simples.jpg",
           "description": "Feijoada básica com feijão preto e carne de porco, servido com arroz, farofa e couve",
           "price": 29.90
         },
         {
+          "id": "3",
           "name": "Feijoada com Costela",
-          "image": "./src/assets/offers/feijoada-costela.jpg",
+          "image": "../assets/dishes/feijoada-costela.jpg",
           "description": "Feijoada enriquecida com costela bovina, acompanhada de arroz, farofa e laranja",
           "price": 44.90
         },
         {
+          "id": "4",
           "name": "Feijoada Light",
-          "image": "./src/assets/offers/feijoada-light.jpg",
+          "image": "../assets/dishes/feijoada-light.jpg",
           "discount": 8,
           "description": "Versão mais leve da feijoada, com feijão preto, peito de frango e legumes",
           "price": 34.90
@@ -454,35 +482,39 @@
     {
       "id": "8",
       "name": "Bolos da Vovó",
-      "image": "./src/assets/featured-restaurants/confeitaria.jpg",
-      "logo": "./src/assets/logoRestaurant/logoConfeitaria.jpg",
+      "image": "../assets/featured-restaurants/confeitaria.jpg",
+      "logo": "../assets/logoRestaurant/logoConfeitaria.jpg",
       "rating": 4.5,
       "status": false,
       "discount": 20,
       "dishes": [
         {
+          "id": "1",
           "name": "Bolo de Chocolate",
-          "image": "./src/assets/offers/bolo-chocolate.jpg",
+          "image": "../assets/dishes/bolo-chocolate.jpg",
           "discount": 10,
           "description": "Bolo de chocolate com cobertura de ganache e raspas de chocolate",
           "price": 25.90
         },
         {
+          "id": "2",
           "name": "Bolo de Cenoura",
-          "image": "./src/assets/offers/bolo-cenoura.jpg",
+          "image": "../assets/dishes/bolo-cenoura.jpg",
           "discount": 8,
           "description": "Bolo de cenoura com cobertura de chocolate e pedaços de cenoura caramelizados",
           "price": 22.90
         },
         {
+          "id": "3",
           "name": "Bolo Red Velvet",
-          "image": "./src/assets/offers/bolo-red-velvet.jpg",
+          "image": "../assets/dishes/bolo-red-velvet.jpg",
           "description": "Bolo Red Velvet com cream cheese e decoração de frutas vermelhas",
           "price": 29.90
         },
         {
+          "id": "4",
           "name": "Bolo de Limão",
-          "image": "./src/assets/offers/bolo-limao.jpg",
+          "image": "../assets/dishes/bolo-limao.jpg",
           "description": "Bolo de limão com cobertura de glacê de limão e raspas de limão",
           "price": 24.90
         }
@@ -491,35 +523,39 @@
     {
       "id": "9",
       "name": "Salgadinhos Brasileiros",
-      "image": "./src/assets/featured-restaurants/salgados.jpg",
-      "logo": "./src/assets/logoRestaurant/logoSalgados.jpg",
+      "image": "../assets/featured-restaurants/salgados.jpg",
+      "logo": "../assets/logoRestaurant/logoSalgados.jpg",
       "rating": 4.9,
       "status": true,
       "discount": 5,
       "dishes": [
         {
+          "id": "1",
           "name": "Coxinha",
-          "image": "./src/assets/offers/coxhinha.jpg",
+          "image": "../assets/dishes/coxinha.jpg",
           "description": "Coxinha de frango desfiado com massa crocante e recheio suculento",
           "price": 4.50
         },
         {
+          "id": "2",
           "name": "Kibe",
-          "image": "./src/assets/offers/kibe.jpg",
+          "image": "../assets/dishes/kibe.jpg",
           "discount": 7,
           "description": "Kibe assado recheado com carne moída temperada",
           "price": 5.00
         },
         {
+          "id": "3",
           "name": "Empada de Frango",
-          "image": "./src/assets/offers/empada-frango.jpg",
+          "image": "../assets/dishes/empada-frango.jpg",
           "discount": 6,
           "description": "Empada de frango com massa leve e recheio cremoso",
           "price": 6.00
         },
         {
+          "id": "4",
           "name": "Bolinho de Bacalhau",
-          "image": "./src/assets/offers/bolinho-bacalhau.jpg",
+          "image": "../assets/dishes/bolinho-bacalhau.jpg",
           "description": "Bolinho de bacalhau com temperos tradicionais e crocância perfeita",
           "price": 7.50
         }
@@ -528,34 +564,38 @@
     {
       "id": "10",
       "name": "Sushi & Sashimi Brasil",
-      "image": "./src/assets/featured-restaurants/comida-japonesa.jpg",
-      "logo": "./src/assets/logoRestaurant/logoComidaJaponesa.jpg",
+      "image": "../assets/featured-restaurants/comida-japonesa.jpg",
+      "logo": "../assets/logoRestaurant/logoComidaJaponesa.jpg",
       "rating": 4.7,
       "status": true,
       "discount": 15,
       "dishes": [
         {
+          "id": "1",
           "name": "Sushi de Salmão",
-          "image": "./src/assets/offers/sushi-salmao.jpg",
+          "image": "../assets/dishes/sushi-salmao.jpg",
           "description": "Deliciosos sushis de salmão fresco com arroz temperado",
           "price": 25.00
         },
         {
+          "id": "2",
           "name": "Temaki de Atum",
-          "image": "./src/assets/offers/temaki-atun.jpg",
+          "image": "../assets/dishes/temaki-atun.jpg",
           "description": "Temaki recheado com atum fresco, abacate e alga nori",
           "price": 18.00
         },
         {
+          "id": "3",
           "name": "Yakissoba de Frango",
-          "image": "./src/assets/offers/yakissoba-frango.jpg",
+          "image": "../assets/dishes/yakissoba-frango.jpg",
           "discount": 8,
           "description": "Macarrão frito com frango, legumes e molho especial",
           "price": 22.00
         },
         {
+          "id": "4",
           "name": "Tempurá de Camarão",
-          "image": "./src/assets/offers/tempura-camarao.jpg",
+          "image": "../assets/dishes/tempura-camarao.jpg",
           "discount": 15,
           "description": "Camarões empanados e fritos, servidos com molho à base de soja",
           "price": 27.00
@@ -565,34 +605,38 @@
     {
       "id": "11",
       "name": "Cantina Italiana",
-      "image": "./src/assets/featured-restaurants/italiana.jpg",
-      "logo": "./src/assets/logoRestaurant/logoItaliana.jpg",
+      "image": "../assets/featured-restaurants/italiana.jpg",
+      "logo": "../assets/logoRestaurant/logoItaliana.jpg",
       "rating": 4.6,
       "status": true,
       "discount": 10,
       "dishes": [
         {
+          "id": "1",
           "name": "Pizza Margherita",
-          "image": "./src/assets/offers/pizza-margherita.jpg",
+          "image": "../assets/dishes/pizza-margherita.jpg",
           "discount": 15,
           "description": "Pizza clássica com molho de tomate, mussarela e manjericão fresco",
           "price": 30.00
         },
         {
+          "id": "2",
           "name": "Pasta Carbonara",
-          "image": "./src/assets/offers/pasta-carbonara.jpg",
+          "image": "../assets/dishes/pasta-carbonara.jpg",
           "description": "Massa fresca com molho cremoso de queijo parmesão, ovos e bacon",
           "price": 28.00
         },
         {
+          "id": "3",
           "name": "Lasagna à Bolonhesa",
-          "image": "./src/assets/offers/lasagna-bolonhesa.jpg",
+          "image": "../assets/dishes/lasagna-bolonhesa.jpg",
           "description": "Lasagna com camadas de carne moída, molho de tomate e queijo derretido",
           "price": 32.00
         },
         {
+          "id": "4",
           "name": "Tiramisu",
-          "image": "./src/assets/offers/tiramisu.jpg",
+          "image": "../assets/dishes/tiramisu.jpg",
           "discount": 20,
           "description": "Sobremesa tradicional italiana com camadas de café, mascarpone e cacau",
           "price": 18.00
@@ -602,34 +646,38 @@
     {
       "id": "12",
       "name": "Esfirra Express",
-      "image": "./src/assets/featured-restaurants/esfirra.jpg",
-      "logo": "./src/assets/logoRestaurant/logoEsfirra.jpg",
+      "image": "../assets/featured-restaurants/esfirra.jpg",
+      "logo": "../assets/logoRestaurant/logoEsfirra.jpg",
       "rating": 4.3,
       "status": true,
       "discount": 8,
       "dishes": [
         {
+          "id": "1",
           "name": "Esfirra de Carne",
-          "image": "./src/assets/offers/esfirra-carne.jpg",
+          "image": "../assets/offers/esfirra-carne.jpg",
           "description": "Esfirra recheada com carne moída temperada e cebola",
           "price": 8.00
         },
         {
+          "id": "2",
           "name": "Esfirra de Frango com Catupiry",
-          "image": "./src/assets/offers/esfirra-frango-catupiry.jpg",
+          "image": "../assets/offers/esfirra-frango-catupiry.jpg",
           "description": "Esfirra recheada com frango desfiado e catupiry",
           "price": 9.00
         },
         {
+          "id": "3",
           "name": "Esfirra de Queijo",
-          "image": "./src/assets/offers/esfirra-queijo.jpg",
+          "image": "../assets/offers/esfirra-queijo.jpg",
           "discount": 8,
           "description": "Esfirra recheada com queijo muçarela e temperos",
           "price": 7.50
         },
         {
+          "id": "4",
           "name": "Esfirra de Espinafre",
-          "image": "./src/assets/offers/esfirra-espinafre.jpg",
+          "image": "../assets/offers/esfirra-espinafre.jpg",
           "discount": 15,
           "description": "Esfirra recheada com espinafre fresco e queijo feta",
           "price": 8.50
@@ -639,35 +687,39 @@
     {
       "id": "13",
       "name": "Frango Assado da Vovó",
-      "image": "./src/assets/featured-restaurants/frango-assado.jpg",
-      "logo": "./src/assets/logoRestaurant/logoFrangoAssado.jpg",
+      "image": "../assets/featured-restaurants/frango-assado.jpg",
+      "logo": "../assets/logoRestaurant/logoFrangoAssado.jpg",
       "rating": 4.6,
       "status": true,
       "discount": 12,
       "dishes": [
         {
+          "id": "1",
           "name": "Frango Assado Tradicional",
-          "image": "./src/assets/offers/frango-assado-tradicional.jpg",
+          "image": "../assets/dishes/frango-assado-tradicional.jpg",
           "description": "Frango assado com temperos clássicos e acompanhamento de batatas",
           "price": 25.00
         },
         {
+          "id": "2",
           "name": "Frango Assado com Ervas Finas",
-          "image": "./src/assets/offers/frango-assado-erbas.jpg",
+          "image": "../assets/dishes/frango-assado-ervas.jpg",
           "discount": 12,
           "description": "Frango assado com um mix de ervas finas e limão, acompanhado de arroz",
           "price": 28.00
         },
         {
+          "id": "3",
           "name": "Frango Assado ao Barbecue",
-          "image": "./src/assets/offers/frango-assado-barbecue.jpg",
+          "image": "../assets/dishes/frango-assado-barbecue.jpg",
           "discount": 15,
           "description": "Frango assado com molho barbecue, servido com salada de coleslaw",
           "price": 30.00
         },
         {
+          "id": "4",
           "name": "Frango Assado com Alho e Limão",
-          "image": "./src/assets/offers/frango-assado-alho-limao.jpg",
+          "image": "../assets/dishes/frango-assado-alho-limao.jpg",
           "description": "Frango assado com tempero de alho e limão, acompanhado de legumes grelhados",
           "price": 27.00
         }
@@ -676,35 +728,39 @@
     {
       "id": "14",
       "name": "Hamburgueria Gourmet",
-      "image": "./src/assets/featured-restaurants/hamburguer-gourmet.jpg",
-      "logo": "./src/assets/logoRestaurant/logoHamburguerGourmet.jpg",
+      "image": "../assets/featured-restaurants/hamburguer-gourmet.jpg",
+      "logo": "../assets/logoRestaurant/logoHamburguerGourmet.jpg",
       "rating": 4.8,
       "status": true,
       "discount": 15,
       "dishes": [
         {
+          "id": "1",
           "name": "Hambúrguer Trufado",
-          "image": "./src/assets/offers/hamburguer-trufado.jpg",
+          "image": "../assets/dishes/hamburguer-trufado.jpg",
           "discount": 20,
           "description": "Hambúrguer gourmet com queijo trufado, cebola caramelizada e molho especial.",
           "price": 45.00
         },
         {
+          "id": "2",
           "name": "Hambúrguer de Cordeiro com Menta",
-          "image": "./src/assets/offers/hamburguer-cordeiro.jpg",
+          "image": "../assets/dishes/hamburguer-cordeiro.jpg",
           "discount": 18,
           "description": "Hambúrguer de cordeiro com molho de menta, queijo feta e rúcula.",
           "price": 50.00
         },
         {
+          "id": "3",
           "name": "Hambúrguer de Angus com Bacon Crocante",
-          "image": "./src/assets/offers/hamburguer-angus-bacon.jpg",
+          "image": "../assets/dishes/hamburguer-angus-bacon.jpg",
           "description": "Hambúrguer de carne Angus, com bacon crocante, queijo cheddar e molho barbecue.",
           "price": 48.00
         },
         {
+          "id": "4",
           "name": "Hambúrguer Vegano com Abacate",
-          "image": "./src/assets/offers/hamburguer-vegano.jpg",
+          "image": "../assets/dishes/hamburguer-vegano.jpg",
           "description": "Hambúrguer vegano com abacate, queijo vegano e molho de iogurte.",
           "price": 42.00
         }
@@ -713,35 +769,39 @@
     {
       "id": "15",
       "name": "Sorveteria Tropical",
-      "image": "./src/assets/featured-restaurants/sorveteria.jpg",
-      "logo": "./src/assets/logoRestaurant/logoSorveteria.jpg",
+      "image": "../assets/featured-restaurants/sorveteria.jpg",
+      "logo": "../assets/logoRestaurant/logoSorveteria.jpg",
       "rating": 4.5,
       "status": true,
       "discount": 5,
       "dishes": [
         {
+          "id": "1",
           "name": "Sundae de Chocolate",
-          "image": "./src/assets/popular-items/sundae-chocolate.jpg",
+          "image": "../assets/dishes/sundae-chocolate.jpg",
           "discount": 10,
           "description": "Sundae com sorvete de chocolate, calda quente de chocolate e chantilly.",
           "price": 18.00
         },
         {
+          "id": "2",
           "name": "Tapioca de Morango",
-          "image": "./src/assets/popular-items/tapioca-morango.jpg",
+          "image": "../assets/dishes/tapioca-morango.jpg",
           "discount": 15,
           "description": "Tapioca recheada com sorvete de morango e cobertura de morango.",
           "price": 22.00
         },
         {
+          "id": "3",
           "name": "Milkshake de Baunilha",
-          "image": "./src/assets/popular-items/milkshake-baunilha.jpg",
+          "image": "../assets/dishes/milkshake-baunilha.jpg",
           "description": "Milkshake cremoso de baunilha com chantilly e granulado.",
           "price": 20.00
         },
         {
+          "id": "4",
           "name": "Sorvete de Açaí",
-          "image": "./src/assets/popular-items/sorvete-acai.jpg",
+          "image": "../assets/dishes/sorvete-acai.jpg",
           "description": "Sorvete de açaí servido com granola e frutas frescas.",
           "price": 15.00
         }
@@ -750,34 +810,38 @@
     {
       "id": "16",
       "name": "Doces da Cidade",
-      "image": "./src/assets/featured-restaurants/doces.jpg",
-      "logo": "./src/assets/logoRestaurant/logoDoces.jpg",
+      "image": "../assets/featured-restaurants/doces.jpg",
+      "logo": "../assets/logoRestaurant/logoDoces.jpg",
       "rating": 4.7,
       "status": true,
       "discount": 10,
       "dishes": [
         {
+          "id": "1",
           "name": "Brigadeiro Gourmet",
-          "image": "./src/assets/popular-items/brigadeiro-gourmet.jpg",
+          "image": "../assets/dishes/brigadeiro-gourmet.jpg",
           "description": "Brigadeiro gourmet com chocolate belga e granulado.",
           "price": 12.00
         },
         {
+          "id": "2",
           "name": "Bolo de Cenoura com Cobertura de Chocolate",
-          "image": "./src/assets/popular-items/bolo-cenoura-chocolate.jpg",
+          "image": "../assets/dishes/bolo-cenoura-chocolate.jpg",
           "discount": 15,
           "description": "Bolo de cenoura fofinho com cobertura de chocolate meio amargo.",
           "price": 35.00
         },
         {
+          "id": "3",
           "name": "Tartelette de Frutas",
-          "image": "./src/assets/popular-items/tartelette-frutas.jpg",
+          "image": "../assets/dishes/tartalette-frutas.jpg",
           "description": "Tartelette recheada com creme pâtissière e frutas frescas.",
           "price": 18.00
         },
         {
+          "id": "4",
           "name": "Trufa de Framboesa",
-          "image": "./src/assets/popular-items/trufa-framboesa.jpg",
+          "image": "../assets/dishes/trufa-framboesa.jpg",
           "discount": 8,
           "description": "Trufa com recheio de framboesa e chocolate branco.",
           "price": 15.00
