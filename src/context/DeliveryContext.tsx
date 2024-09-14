@@ -5,10 +5,13 @@ interface DeliveryContextProps {
   saveUser: (user: User) => void
   handleSearchCep: (cep: CEP) => void
   searchRestaurants: (restaurant: Restaurants[]) => void
+  handleIncrement: () => void
+  handleDecrement: () => void
   hasUser: boolean;
   user: User | null
   cep: CEP | null
   restaurants: Restaurants[] | null
+  count: number
 }
 
 interface Restaurants {
@@ -43,6 +46,15 @@ export function DeliveryProvider({ children }: DeliveryProviderProps) {
   const [cep, setCep] = useState<CEP | null>(null)
   const [user, setUser] = useState<User | null>(null)
   const [hasUser, setHasUser] = useState(false)  
+  const [count, setCount] = useState(1)
+
+  function handleIncrement() {
+    setCount((prevState) => prevState + 1)
+  }
+
+  function handleDecrement() {
+    setCount((prevState) => prevState - 1)
+  }
 
   function searchRestaurants(restaurant: Restaurants[]) {
     setRestaurants(restaurant)
@@ -74,7 +86,10 @@ export function DeliveryProvider({ children }: DeliveryProviderProps) {
       handleSearchCep,
       cep,
       searchRestaurants,
-      restaurants
+      restaurants,
+      handleIncrement,
+      handleDecrement,
+      count
     }}>
       {children}
     </DeliveryContext.Provider>

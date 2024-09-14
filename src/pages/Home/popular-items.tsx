@@ -37,7 +37,7 @@ export function PopularItems() {
       <h2 className="text-[43px] font-bold text-center mb-[88px]">Populares</h2>
       <div className="flex items-center justify-center gap-12 max-w-[1920px] mx-auto px-4">
         <button
-          className="bg-[#faaa01] rounded-full text-white shadow-button-carousel transition-all duration-300 ease-in-out hover:bg-[#e89c00] hover:shadow-lg hover:scale-105"
+          className="bg-[#faaa01] absolute top-24 left-1/3 sm:static rounded-full text-white shadow-button-carousel transition-all duration-300 ease-in-out hover:bg-[#e89c00] hover:shadow-lg hover:scale-105"
           onClick={() => swiperRef.current?.slidePrev()}
         >
           <ChevronLeft className="size-14 mx-auto" />
@@ -62,7 +62,7 @@ export function PopularItems() {
         </Swiper>
 
         <button
-          className="bg-[#faaa01] rounded-full text-white shadow-button-carousel transition-all duration-300 ease-in-out hover:bg-[#e89c00] hover:shadow-lg hover:scale-105"
+          className="bg-[#faaa01] absolute top-24 right-1/3 sm:static rounded-full text-white shadow-button-carousel transition-all duration-300 ease-in-out hover:bg-[#e89c00] hover:shadow-lg hover:scale-105"
           onClick={() => swiperRef.current?.slideNext()}
         >
           <ChevronRight className="size-14 mx-auto" />

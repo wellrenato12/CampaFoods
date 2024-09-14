@@ -37,7 +37,7 @@ export function Home() {
   }, [])
 
   return (
-    <div>
+    <div className="mt-[96px] sm:mt-[64px] md:mt-[80px]">
       <div className="bg-no-repeat bg-cover" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <div className="relative max-w-[1440px] h-auto xl:h-[620px] px-4 xl:px-0 pt-3 sm:pt-12 xl:pt-0 mx-auto flex flex-col xl:flex-row items-center justify-between gap-8 xl:gap-0">
           <div className="md:w-[750px] space-y-8">

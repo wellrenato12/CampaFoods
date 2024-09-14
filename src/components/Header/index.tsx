@@ -59,8 +59,8 @@ export function Header() {
   }, [])
 
   return (
-    <>
-      <header className="max-w-[1440px] mx-auto flex flex-col gap-2 sm:gap-0 sm:flex-row items-center justify-between py-5 sm:px-5 2xl:px-0">
+    <div className="border-b-2 fixed top-0 w-full bg-white z-10">
+      <header className="max-w-[1440px] mx-auto flex flex-col gap-2 sm:gap-0 sm:flex-row items-center justify-between py-4 sm:px-5 2xl:px-0">
         <div className='flex items-center gap-1'>
           <img loading="lazy" className="size-7" src={logo} alt="Imagem da logo" />
           <Link to="/inicio" className="text-2xl md:text-3xl font-bold">
@@ -106,9 +106,9 @@ export function Header() {
       </header >
       {pageSize.width <= 768 && <MenuMobile isOpen={isProfileOpen} onOpen={openProfileDrawer} onClose={closeProfileDrawer} />}
 
-      < Profile isOpen={isProfileOpen} onClose={closeProfileDrawer} />
+      <Profile isOpen={isProfileOpen} onClose={closeProfileDrawer} />
 
       <Cart isOpen={isCartOpen} onClose={closeCartDrawer} />
-    </>
+    </div>
   )
 }

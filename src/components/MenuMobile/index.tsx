@@ -83,14 +83,12 @@ export function MenuMobile({ isOpen, onClose }: MenuMobileProps) {
         {links.map((link) => (
           <li key={link.name} className="font-medium py-4 text-xs">
             {link.link ? (
-              // Renderiza links normais
               <Link to={link.link} className="flex flex-col items-center">
                 {link.icon}
                 {link.name}
               </Link>
             ) : (
               <>
-                {/* Renderiza o botão e o Drawer para o perfil ou outras funcionalidades */}
                 <button
                   ref={buttonRef}
                   onClick={() =>
@@ -104,12 +102,10 @@ export function MenuMobile({ isOpen, onClose }: MenuMobileProps) {
                   {link.name}
                 </button>
 
-                {/* Drawer para o Perfil */}
                 {link.name === 'Perfil' && (
                   <Profile isOpen={isProfileOpen} onClose={() => setIsProfileOpen(false)} />
                 )}
 
-                {/* Drawer para o Carrinho */}
                 {link.name === 'Carrinho' && (
                   <Drawer
                     isOpen={isCartOpen}
