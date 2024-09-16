@@ -93,7 +93,7 @@ export function Footer() {
         <hr className="border-t-2 border-gray-300 my-10" />
 
         <div className="flex flex-col md:flex-row gap-4 md:gap-0 items-center justify-between text-center md:text-start">
-          <p>Todos os direitos reservados &copy; <strong className="font-bold">FoodWagon, 2024</strong></p>
+          <p>Todos os direitos reservados &copy; <strong className="font-bold">CampaFoods, 2024</strong></p>
           <p className="flex">Feito com carinho<Heart className="mx-1" fill="#FDBC30" color="#FDBC30" /> por<a className="ml-1 font-bold hover:scale-105 transition-all text-gray-200" href="https://www.figma.com/community/file/996012879169900959/foodwagon-food-delivery-landing-template-by-themewagon" target="_blank">Themewagon</a></p>
         </div>
       </div>

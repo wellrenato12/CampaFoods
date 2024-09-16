@@ -11,6 +11,7 @@ import {
 import { useContext, useState, useRef } from 'react'
 import { useForm } from 'react-hook-form'
 import { DeliveryContext } from '../../context/DeliveryContext'
+import { toast } from 'react-toastify';
 
 interface CEPFormData {
   cep: string;
@@ -68,7 +69,10 @@ export function Cep() {
     <>
       <div
         className="bg-[#faaa01] cursor-pointer px-4 py-2 rounded-full text-white font-bold shadow-button-carousel transition-all duration-300 ease-in-out hover:bg-[#e89c00] hover:shadow-lg hover:scale-105"
-        onClick={() => hasUser ? onOpen() : alert('Por favor, efetue login primeiro')}
+        onClick={() => hasUser ? onOpen() : toast.info('Por favor, efetue login primeiro', {
+          autoClose: 1000,
+          theme: "colored",
+        })}
       >
         Buscar Cep
       </div>

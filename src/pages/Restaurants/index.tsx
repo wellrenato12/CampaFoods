@@ -30,7 +30,7 @@ export function Restaurants() {
   return (
     <div className="max-w-[1920px] mx-auto mb-20 mt-[120px] md:mt-[160px]">
       <div className="flex justify-center gap-12 mb-16">
-        <h2 className="text-2xl font-bold">Lojas</h2>
+        <h2 className="text-2xl font-bold">Restaurantes</h2>
         <Menu>
           <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
             Filtros

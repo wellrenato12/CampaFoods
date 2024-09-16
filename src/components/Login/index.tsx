@@ -15,6 +15,7 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { api } from '../../lib/axios'
 import { DeliveryContext } from '../../context/DeliveryContext'
+import { toast } from 'react-toastify'
 
 const loginSchema = z.object({
   email: z.string().email('E-mail inválido'),
@@ -67,13 +68,19 @@ export function Login() {
 
       if (response.data.length > 0) {
         const user = response.data[0]
-        alert('Logado com sucesso!')
+        toast.success('Logado com sucesso!', {
+          autoClose: 1000,
+          theme: "colored",
+        })
         resetLoginForm()
         handleHasUser()
         saveUser(user)
         onClose();
       } else {
-        console.error('Usuário não encontrado ou senha incorreta')
+        toast.warning('Usuário não encontrado ou senha incorreta', {
+          autoClose: 1000,
+          theme: "colored",
+        })
       }
     } catch (error) {
       console.error('Erro ao realizar login:', error)
@@ -98,6 +105,10 @@ export function Login() {
       )
       setHasRegister(true)
       resetRegisterForm()
+      toast.success('Usuário cadastrado com sucesso!', {
+        autoClose: 1000,
+        theme: "colored",
+      })
       onClose()
     } catch (error) {
       console.error('Error creating user:', error)

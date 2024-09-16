@@ -9,11 +9,15 @@ import { Restaurants } from "./pages/Restaurants";
 import { DefaultLayout } from "./layouts/DefaultLayout";
 import { DeliveryProvider } from "./context/DeliveryContext";
 import { RestaurantDishes } from "./pages/RestaurantDishes";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import { CompletedOrder } from "./pages/CompletedOrder";
 
 export function App() {
   return (
     <ChakraProvider>
       <DeliveryProvider>
+        <ToastContainer />
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<DefaultLayout />}>
@@ -21,6 +25,7 @@ export function App() {
               <Route path="/inicio" element={<Home />} />
               <Route path="/restaurantes" element={<Restaurants />} />
               <Route path="/restaurantes/:id" element={<RestaurantDishes />} />
+              <Route path="/pedido-finalizado" element={<CompletedOrder />} />
             </Route>
           </Routes>
         </BrowserRouter>

@@ -1,4 +1,5 @@
 import { createContext, useState, type ReactNode } from "react";
+import { toast } from "react-toastify";
 
 interface DeliveryContextProps {
   handleHasUser: () => void;
@@ -7,12 +8,16 @@ interface DeliveryContextProps {
   searchRestaurants: (restaurant: Restaurants[]) => void
   handleAddToCart: (newDish: Cart, onClose: () => void) => void
   updateCart: (newArrayDishes: Cart[]) => void
+  selectPaymentMethod: (paymentMethod: PaymentMethod) => void
   hasUser: boolean;
   user: User | null
   cep: CEP | null
   restaurants: Restaurants[] | null
   cart: Cart[]
+  paymentMethod: PaymentMethod
 }
+
+export type PaymentMethod = 'Cartão de crédito' | 'Pix'
 
 interface Cart {
   id: string
@@ -51,12 +56,17 @@ interface DeliveryProviderProps {
 export const DeliveryContext = createContext({} as DeliveryContextProps)
 
 export function DeliveryProvider({ children }: DeliveryProviderProps) {
+  const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>('Cartão de crédito')
   const [cart, setCart] = useState<Cart[]>([])
   const [restaurants, setRestaurants] = useState<Restaurants[]>([])
   const [cep, setCep] = useState<CEP | null>(null)
   const [user, setUser] = useState<User | null>(null)
-  const [hasUser, setHasUser] = useState(false) 
-  
+  const [hasUser, setHasUser] = useState(false)
+
+  function selectPaymentMethod(paymentMethod: PaymentMethod) {
+    setPaymentMethod(paymentMethod)
+  }
+
   function updateCart(newArrayDishes: Cart[]) {
     setCart(newArrayDishes)
   }
@@ -64,16 +74,22 @@ export function DeliveryProvider({ children }: DeliveryProviderProps) {
   function handleAddToCart(newDish: Cart, onClose: () => void) {
     if (cart.length > 0) {
       const sameRestaurant = cart.every(item => item.restaurantName === newDish.restaurantName);
-  
+
       if (!sameRestaurant) {
-        alert('Você só pode adicionar produtos de um mesmo restaurante ao carrinho.');
+        toast.warning('Você só pode adicionar produtos de um mesmo restaurante ao carrinho.', {
+          autoClose: 1000,
+          theme: "colored",
+        });
         return;
       }
     }
-  
+
     setCart(prevState => [...prevState, newDish]);
-  
-    alert('Pedido adicionado ao carrinho!');
+
+    toast.success('Pedido adicionado ao carrinho!', {
+      autoClose: 1000,
+      theme: "colored",
+    });
     onClose()
   }
 
@@ -88,9 +104,12 @@ export function DeliveryProvider({ children }: DeliveryProviderProps) {
   function handleHasUser() {
     if (hasUser) {
       setCep(null)
-      alert('Usuário deslogado com sucesso!')
+      toast.success('Usuário deslogado com sucesso!', {
+        autoClose: 1000,
+        theme: "colored",
+      })
     }
-    
+
     setHasUser(!hasUser)
   }
 
@@ -111,6 +130,8 @@ export function DeliveryProvider({ children }: DeliveryProviderProps) {
       handleAddToCart,
       cart,
       updateCart,
+      selectPaymentMethod,
+      paymentMethod,
     }}>
       {children}
     </DeliveryContext.Provider>

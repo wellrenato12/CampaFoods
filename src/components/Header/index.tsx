@@ -66,8 +66,8 @@ export function Header() {
         <div className='flex items-center gap-1'>
           <img loading="lazy" className="size-7" src={logo} alt="Imagem da logo" />
           <Link to="/inicio" className="text-2xl md:text-3xl font-bold">
-            <span className="text-[#f17228]">food</span>
-            <span className="text-[#ffb30e]">wagon</span>
+            <span className="text-[#f17228]">Campa</span>
+            <span className="text-[#ffb30e]">Foods</span>
           </Link>
         </div>
         {cep?.address && cep?.number ? (
@@ -81,9 +81,21 @@ export function Header() {
         {pageSize.width > 768 && (
           <div className='flex items-center gap-6'>
             {hasUser ? (
-              <button onClick={handleHasUser} title='Sair'>
-                <LogOut />
-              </button>
+              <>
+                <button onClick={handleHasUser} title='Sair'>
+                  <LogOut />
+                </button>
+                <button
+                  onClick={openCartDrawer}
+                  className='flex items-center gap-2 hover:bg-gray-100 p-2 rounded-lg transition-all'
+                >
+                  <ShoppingCart color='#ffb30e' size={26} />
+                  <div className='flex flex-col text-xs text-zinc-500'>
+                    <span>R$ {totalValue === 0 ? '0,00' : totalValue.toFixed(2)}</span>
+                    <span>{cart.length} itens</span>
+                  </div>
+                </button>
+              </>
             ) : (
               <button
                 className="flex items-center gap-2.5 text-[#ffb30e] text-lg font-bold px-4 py-3.5 shadow-button-login rounded-lg transition duration-300 ease-in-out transform hover:bg-[#ffb30e] hover:text-white hover:scale-105 hover:shadow-lg"
@@ -93,16 +105,6 @@ export function Header() {
                 Login
               </button>
             )}
-            <button
-              onClick={openCartDrawer}
-              className='flex items-center gap-2 hover:bg-gray-100 p-2 rounded-lg transition-all'
-            >
-              <ShoppingCart color='#ffb30e' size={26} />
-              <div className='flex flex-col text-xs text-zinc-500'>
-                <span>R$ {totalValue === 0 ? '0,00' : totalValue.toFixed(2)}</span>
-                <span>{cart.length} itens</span>
-              </div>
-            </button>
           </div>
         )}
       </header >
