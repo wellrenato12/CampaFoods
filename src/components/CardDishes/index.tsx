@@ -8,24 +8,36 @@ import {
   Button,
 } from '@chakra-ui/react'
 import { Minus, Plus } from 'lucide-react';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { DeliveryContext } from '../../context/DeliveryContext';
+import { v4 as uuidv4 } from 'uuid';
 
 interface CardDishesProps {
   description: string;
   image: string;
+  restaurantName: string;
   name: string;
   price: number;
   discount?: number;
 }
 
 export function CardDishes({
-  description, image, name, price, discount
+  description, image, name, price, discount, restaurantName
 }: CardDishesProps) {
-  const { handleIncrement, handleDecrement, count } = useContext(DeliveryContext)
+  const [count, setCount] = useState(1)
+  const { handleAddToCart } = useContext(DeliveryContext)
   const { isOpen, onOpen, onClose } = useDisclosure();
   const discountedPrice = discount ? price - (price * discount / 100) : null;
   const totalValue = discountedPrice ? discountedPrice * count : price * count
+  const priceDish = discountedPrice !== null ? discountedPrice : price
+
+  function handleIncrement() {
+    setCount((prevState) => prevState + 1)
+  }
+
+  function handleDecrement() {
+    setCount((prevState) => prevState - 1)
+  }
 
   return (
     <>
@@ -73,13 +85,21 @@ export function CardDishes({
                 <div className="flex gap-4">
                   <Button as="span" className='flex items-center gap-5'>
                     <Minus
-                      onClick={() => count > 1 && handleDecrement()} 
-                      className='cursor-pointer' size={14} 
+                      onClick={() => count > 1 && handleDecrement()}
+                      className='cursor-pointer' size={14}
                     />
                     {count}
                     <Plus onClick={handleIncrement} className='cursor-pointer' size={14} />
                   </Button>
                   <Button
+                    onClick={() => handleAddToCart({
+                      id: uuidv4(),
+                      restaurantName,
+                      nameDish: name,
+                      quantity: count,
+                      price: priceDish,
+                      description
+                    }, onClose)}
                     bgColor='#ffb30e'
                     _hover={{ bgColor: '#ff9900' }}
                     className='flex-1'

@@ -12,7 +12,9 @@ import { Cep } from '../Cep'
 import { Link } from 'react-router-dom'
 
 export function Header() {
-  const { hasUser, handleHasUser, cep } = useContext(DeliveryContext)
+  const { hasUser, handleHasUser, cep, cart } = useContext(DeliveryContext)
+
+  const totalValue = cart.reduce((total, item) => total + item.price * item.quantity, 0);
 
   const {
     isOpen: isProfileOpen,
@@ -97,14 +99,14 @@ export function Header() {
             >
               <ShoppingCart color='#ffb30e' size={26} />
               <div className='flex flex-col text-xs text-zinc-500'>
-                <span>R$ 0,00</span>
-                <span>0 itens</span>
+                <span>R$ {totalValue === 0 ? '0,00' : totalValue.toFixed(2)}</span>
+                <span>{cart.length} itens</span>
               </div>
             </button>
           </div>
         )}
       </header >
-      {pageSize.width <= 768 && <MenuMobile isOpen={isProfileOpen} onOpen={openProfileDrawer} onClose={closeProfileDrawer} />}
+      {pageSize.width <= 768 && <MenuMobile closeCartDrawer={closeCartDrawer} openCartDrawer={openCartDrawer} isCartOpen={isCartOpen} isOpen={isProfileOpen} onOpen={openProfileDrawer} onClose={closeProfileDrawer} />}
 
       <Profile isOpen={isProfileOpen} onClose={closeProfileDrawer} />
 

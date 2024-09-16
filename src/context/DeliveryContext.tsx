@@ -5,13 +5,22 @@ interface DeliveryContextProps {
   saveUser: (user: User) => void
   handleSearchCep: (cep: CEP) => void
   searchRestaurants: (restaurant: Restaurants[]) => void
-  handleIncrement: () => void
-  handleDecrement: () => void
+  handleAddToCart: (newDish: Cart, onClose: () => void) => void
+  updateCart: (newArrayDishes: Cart[]) => void
   hasUser: boolean;
   user: User | null
   cep: CEP | null
   restaurants: Restaurants[] | null
-  count: number
+  cart: Cart[]
+}
+
+interface Cart {
+  id: string
+  restaurantName: string
+  nameDish: string
+  quantity: number
+  price: number
+  description: string
 }
 
 interface Restaurants {
@@ -42,18 +51,30 @@ interface DeliveryProviderProps {
 export const DeliveryContext = createContext({} as DeliveryContextProps)
 
 export function DeliveryProvider({ children }: DeliveryProviderProps) {
+  const [cart, setCart] = useState<Cart[]>([])
   const [restaurants, setRestaurants] = useState<Restaurants[]>([])
   const [cep, setCep] = useState<CEP | null>(null)
   const [user, setUser] = useState<User | null>(null)
-  const [hasUser, setHasUser] = useState(false)  
-  const [count, setCount] = useState(1)
-
-  function handleIncrement() {
-    setCount((prevState) => prevState + 1)
+  const [hasUser, setHasUser] = useState(false) 
+  
+  function updateCart(newArrayDishes: Cart[]) {
+    setCart(newArrayDishes)
   }
 
-  function handleDecrement() {
-    setCount((prevState) => prevState - 1)
+  function handleAddToCart(newDish: Cart, onClose: () => void) {
+    if (cart.length > 0) {
+      const sameRestaurant = cart.every(item => item.restaurantName === newDish.restaurantName);
+  
+      if (!sameRestaurant) {
+        alert('Você só pode adicionar produtos de um mesmo restaurante ao carrinho.');
+        return;
+      }
+    }
+  
+    setCart(prevState => [...prevState, newDish]);
+  
+    alert('Pedido adicionado ao carrinho!');
+    onClose()
   }
 
   function searchRestaurants(restaurant: Restaurants[]) {
@@ -87,9 +108,9 @@ export function DeliveryProvider({ children }: DeliveryProviderProps) {
       cep,
       searchRestaurants,
       restaurants,
-      handleIncrement,
-      handleDecrement,
-      count
+      handleAddToCart,
+      cart,
+      updateCart,
     }}>
       {children}
     </DeliveryContext.Provider>

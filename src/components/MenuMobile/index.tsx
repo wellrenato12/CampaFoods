@@ -1,21 +1,16 @@
 import { House, ShoppingCart, User, Utensils } from 'lucide-react'
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import sacola from '../../assets/sacola.png'
-
-import {
-  Drawer,
-  DrawerBody,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-} from '@chakra-ui/react'
 import { Profile } from '../Profile'
+import { Cart } from '../Cart'
 
 interface MenuMobileProps {
   isOpen: boolean
   onOpen: () => void
   onClose: () => void
+  closeCartDrawer: () => void
+  openCartDrawer: () => void
+  isCartOpen: boolean
 }
 
 interface NavLink {
@@ -24,14 +19,14 @@ interface NavLink {
   icon: ReactNode
 }
 
-export function MenuMobile({ isOpen, onClose }: MenuMobileProps) {
+export function MenuMobile({ isOpen, onClose, isCartOpen, closeCartDrawer }: MenuMobileProps) {
   const buttonRef = useRef<HTMLButtonElement | null>(null)
 
   const [pageSize, setPageSize] = useState({
     width: window.innerWidth,
   })
 
-  const [isCartOpen, setIsCartOpen] = useState(false)
+  const [cartOpen, setCarOpen] = useState(false)
   const [isProfileOpen, setIsProfileOpen] = useState(false)
 
   useEffect(() => {
@@ -55,6 +50,12 @@ export function MenuMobile({ isOpen, onClose }: MenuMobileProps) {
       onClose()
     }
   }, [pageSize.width, isOpen, onClose])
+
+  useEffect(() => {
+    if (isCartOpen && pageSize.width > 768) {
+      closeCartDrawer()
+    }
+  }, [pageSize.width, isCartOpen, closeCartDrawer])
 
   const links: NavLink[] = [
     {
@@ -93,7 +94,7 @@ export function MenuMobile({ isOpen, onClose }: MenuMobileProps) {
                   ref={buttonRef}
                   onClick={() =>
                     link.name === 'Carrinho'
-                      ? setIsCartOpen(true)
+                      ? setCarOpen(true)
                       : setIsProfileOpen(true)
                   }
                   className="flex flex-col items-center"
@@ -107,22 +108,23 @@ export function MenuMobile({ isOpen, onClose }: MenuMobileProps) {
                 )}
 
                 {link.name === 'Carrinho' && (
-                  <Drawer
-                    isOpen={isCartOpen}
-                    placement="bottom"
-                    size="full"
-                    onClose={() => setIsCartOpen(false)}
-                  >
-                    <DrawerOverlay />
-                    <DrawerContent>
-                      <DrawerCloseButton />
-                      <DrawerBody className="flex flex-col items-center justify-center">
-                        <img loading="lazy" src={sacola} alt="Sacola vazia" />
-                        <p className="font-semibold text-lg">Sua sacola está vazia</p>
-                        <p className="text-gray-400 text-sm">Adicione itens</p>
-                      </DrawerBody>
-                    </DrawerContent>
-                  </Drawer>
+                  <Cart isOpen={cartOpen} onClose={() => setCarOpen(false)} />
+                  // <Drawer
+                  //   isOpen={cartOpen}
+                  //   placement="bottom"
+                  //   size="full"
+                  //   onClose={() => setCarOpen(false)}
+                  // >
+                  //   <DrawerOverlay />
+                  //   <DrawerContent>
+                  //     <DrawerCloseButton />
+                  //     <DrawerBody className="flex flex-col items-center justify-center">
+                  //       <img loading="lazy" src={sacola} alt="Sacola vazia" />
+                  //       <p className="font-semibold text-lg">Sua sacola está vazia</p>
+                  //       <p className="text-gray-400 text-sm">Adicione itens</p>
+                  //     </DrawerBody>
+                  //   </DrawerContent>
+                  // </Drawer>
                 )}
               </>
             )}

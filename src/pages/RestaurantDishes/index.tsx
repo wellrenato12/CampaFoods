@@ -59,6 +59,7 @@ export function RestaurantDishes() {
             name={dish.name}
             price={dish.price}
             discount={dish.discount}
+            restaurantName={restaurant?.name}
           />
         ))}
       </div>
