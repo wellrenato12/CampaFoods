@@ -1,50 +1,50 @@
-# React + TypeScript + Vite
+# CampaFoods
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introdução
+O projeto surgiu com o intuito de ser um grande desafio pessoal, motivado pelo término do meu último bootcamp. Após dedicar alguns dias ao planejamento, decidi criar um projeto significativo do zero. Durante uma pesquisa de layouts no Figma, encontrei um conceito de delivery que me chamou a atenção e, a partir disso, comecei a idealizar como construir o projeto.
+A inspiração também veio do iFood, que ajudou a moldar algumas das funcionalidades e conceitos que integrei ao projeto. O objetivo principal é trabalhar minhas habilidades técnicas e expandir meu conhecimento durante o desenvolvimento. Além disso, o projeto visa enriquecer meu portfólio, oferecendo uma demonstração concreta das minhas competências em design e desenvolvimento.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
+Frontend:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ReactJS: Utilizado para construir a interface do usuário de forma dinâmica e eficiente.
+TypeScript: Adicionado para garantir a segurança de tipos e melhorar a manutenção do código.
+TailwindCSS: Framework de estilização utilizado para criar um design responsivo e moderno de forma rápida e eficiente.
+Chakra UI: Biblioteca de componentes para criar uma interface de usuário acessível e com um design consistente.
+React Router DOM: Utilizado para gerenciar a navegação e rotas dentro da aplicação.
+React Toastify: Implementado para fornecer notificações de forma fácil e estilizada.
+Swiper: Biblioteca utilizada para criar sliders e carrosséis interativos.
+Backend:
 
-## Expanding the ESLint configuration
+JSON Server: Simulador de backend que fornece uma API RESTful para desenvolvimento e testes.
+Bibliotecas e Ferramentas Adicionais:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Hook Form com Zod: Utilizado para gerenciar e validar formulários de forma simples e eficiente.
+Lucide Icons: Biblioteca de ícones utilizados para melhorar a usabilidade e a estética da aplicação.
+Axios: Biblioteca para realizar requisições HTTP para a API.
+Outras Tecnologias:
 
-- Configure the top-level `parserOptions` property like this:
+UUID: Utilizado para gerar identificadores únicos em diversas partes da aplicação.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Instalação
+### Requisitos
+- Node.js v14+
+- NPM ou Yarn
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Passos para Instalação
+1. Clone o repositório:
+    ```bash
+    git clone https://github.com/wellrenato12/CampaFoods.git
+    ```
+2. Instale as dependências:
+    ```bash
+    npm install
+    ```
+3. Inicie o servidor:
+     ```
+    npx json-server data/db.json
+      ```
+5. Inicie o projeto:
+    ```bash
+    npm run dev
+    ```
